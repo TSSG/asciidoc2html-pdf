@@ -2,8 +2,8 @@
 This repository contains both the Asciidoc2html-pdf toolchain and the Apache Ant build wrapper system for the toolchain.
 
 
-## asciidoc2html-pdf 
-Contains the codebase for the asciidoc2html-pdf toolchain wrapper for the Asciidoc tool, while it is possible to run
+## asciidoc2html-pdf/
+This directory contains the codebase for the asciidoc2html-pdf toolchain wrapper for the Asciidoc tool, while it is possible to run
 the script directly, it is recommended you interact with the system through the doc-ant system instead, as it adds
 a more user friendly interface for the system.
 
@@ -43,8 +43,8 @@ The following example should demonstrate how best to do this from within your As
 You may need to build the pdf/html output several times while adjusting the _scaledwidth_ or _scaledheight_ values to suit
 your document, or alternatively edit the size of the input image instead.
 
-## doc-ant
-Contains the file structure and build system wrapper for the asciidoc2html-pdf toolchain. This system is an Ant
+## doc-ant/
+This directory contains the file structure and build system wrapper for the asciidoc2html-pdf toolchain. This system is an Ant
 build file, and requires that Apache Ant be installed on the system PATH.
 
 This ant build system is designed to make the Asciidoc2html-pdf toolchain easier to manage, it allows an easy to use

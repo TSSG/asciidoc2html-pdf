@@ -8,6 +8,29 @@ the script directly, it is recommended you interact with the system through the 
 a more user friendly interface for the system.
 
 
+### Document Template Configurations
+The following is a sample Header Template configuration for a document. This must be placed at the top of the document
+before any further Asciidoc content. It is used by both the HTML and PDF template generation java helper jar.
+This system is rather fragile at present, and will most likely break if you attempt to alter the structure or swap
+the order they appear in etc.
+
+
+    :reporttype:    HOWTO
+    :reporttitle:   Configuring a .netrc file for automatic user authentication with bitbucket.org
+    :author:        David Kirwan
+    :email:         dkirwan@tssg.org
+    :group:         Telecommunications Software and Systems Group (TSSG)
+    :address:       Waterford Institute of Technology, West Campus, Carriganore, Waterford, Ireland 
+    :revdate:       September 10, 2012
+    :revnumber:     0.1
+    :docdate:       September 10, 2012
+    :description:   HOWTO configure the .netrc file to allow automatic user credentials authentication with https://bitbucket.org
+    :legal:         (C) Waterford Institute of Technology
+    :encoding:      iso-8859-1
+    :toc:
+
+
+
 ## doc-ant
 Contains the file structure and build system wrapper for the asciidoc2html-pdf toolchain. This system is an Ant
 build file, and requires that Apache Ant be installed on the system PATH.

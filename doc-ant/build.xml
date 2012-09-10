@@ -1,0 +1,60 @@
+<project>
+    <property file="build.properties" /> 
+    <dirname property="name.dir" file="build.xml"/>
+
+    <target name="clean-all" depends="clean-html,clean-pdf" />
+
+    <target name="clean-html">
+	<delete dir="${html.builder.output}" />
+    </target>
+
+    <target name="clean-pdf">
+	<delete dir="${pdf.builder.output}" />
+    </target>
+
+
+    <target name="html" depends="clean-html" description="makes HTML draft of document">
+	<mkdir dir="${html.builder.output}" />
+	<copy todir="${html.builder.output}/images" failonerror="false" >
+	    <fileset dir="src/images" />
+	</copy>
+	<exec executable="/bin/sh">
+	    <arg line='-c "${html.builder.path} html ${name.dir}/src/${name.project}.asciidoc ${name.dir}/${html.builder.output}"'/>    
+	</exec>
+	<echo message="${name.dir}/src/${name.project}.asciidoc"/>
+    </target>
+
+    <target name="pdf" depends="clean-pdf" description="makes a PDF draft of the document">
+	<mkdir dir="${pdf.builder.output}" />
+	<exec executable="/bin/sh">
+	    <arg line='-c "${pdf.builder.path} pdf ${name.dir}/src/${name.project}.asciidoc ${name.dir}/${pdf.builder.output}"'/>
+	</exec>
+    </target>
+
+    <target name="web-deploy" depends="html" description="deploys the HTML document to the configured webdav share">
+	<mkdir dir="${html.builder.publish}/${name.project}" />
+	<copy todir="${html.builder.publish}/${name.project}" >
+	    <fileset dir="${html.builder.output}" />
+	</copy>
+    </target>
+
+    <target name="p4-deploy" depends="pdf" description="deploys the PDF document to the configured Perforce directory">
+	<copy file="${pdf.builder.output}/${name.project}.pdf" todir="${perforce.workingdir}"/>
+	
+	<exec executable="p4">
+	    <arg value="add"/>
+	    <arg value="${perforce.workingdir}/${name.project}.pdf"/>
+	</exec>
+	
+	<exec executable="p4">
+	    <arg value="submit"/>
+	    <arg value="-d"/>
+	    <arg value="added ${name.project}.pdf"/>
+	</exec>
+
+    </target>
+
+    <target name="deploy" depends="web-deploy,p4-deploy" description="builds and deploys the documents">
+	
+    </target>
+</project>

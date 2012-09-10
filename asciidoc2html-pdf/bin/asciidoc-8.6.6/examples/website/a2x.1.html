@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="AsciiDoc 8.6.6" />
+<title>A2X(1)</title>
+<link rel="stylesheet" href="./asciidoc.css" type="text/css" />
+<link rel="stylesheet" href="./asciidoc-manpage.css" type="text/css" />
+<link rel="stylesheet" href="./layout2.css" type="text/css" />
+<script type="text/javascript" src="./asciidoc.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+asciidoc.install();
+/*]]>*/
+</script>
+</head>
+<body>
+<div id="layout-menu-box">
+<div id="layout-menu">
+  <div>&#187;<a href="index.html">Home</a></div>
+  <div>&#187;<a href="userguide.html">User&nbsp;Guide</a></div>
+  <div>&#187;<a href="INSTALL.html">Installation</a></div>
+  <div>&#187;<a href="faq.html">FAQ</a></div>
+  <div>&#187;<a href="manpage.html">asciidoc(1)</a></div>
+  <div>&#187;<a href="a2x.1.html">a2x(1)</a></div>
+  <div>&#187;<a href="asciidocapi.html">API</a></div>
+  <div>&#187;<a href="plugins.html">Plugins</a></div>
+  <div>&#187;<a href="http://powerman.name/doc/asciidoc">Cheatsheet</a></div>
+  <div>&#187;<a href="testasciidoc.html">Tests</a></div>
+  <div>&#187;<a href="CHANGELOG.html">ChangeLog</a></div>
+  <div>&#187;<a href="support.html">Support</a></div>
+  <div id="page-source">&#187;<a href="a2x.1.txt">Page&nbsp;Source</a></div>
+</div>
+</div>
+<div id="layout-content-box">
+<div id="layout-banner">
+  <div id="layout-title">AsciiDoc</div>
+  <div id="layout-description">Text based document generation</div>
+</div>
+<div id="layout-content">
+<div id="header">
+<h1>
+A2X(1) Manual Page
+</h1>
+<h2>NAME</h2>
+<div class="sectionbody">
+<p>a2x -
+   A toolchain manager for AsciiDoc (converts Asciidoc text files to other       file formats)
+</p>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_synopsis">SYNOPSIS</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><strong>a2x</strong> [<em>OPTIONS</em>] <em>SOURCE_FILE</em></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_description">DESCRIPTION</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>A DocBook toolchain manager that translates an AsciiDoc text file
+<em>SOURCE_FILE</em> to PDF, EPUB, DVI, PS, LaTeX, XHTML (single page or
+chunked), man page, HTML Help or plain text formats using
+<em><tt>asciidoc(1)</tt></em> and other applications (see <a href="#X1">REQUISITES section</a>).
+<em>SOURCE_FILE</em> can also be a DocBook file with an .xml extension.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_options">OPTIONS</h2>
+<div class="sectionbody">
+<div class="dlist"><dl>
+<dt class="hdlist1">
+<strong>-a, --attribute</strong>=<em>ATTRIBUTE</em>
+</dt>
+<dd>
+<p>
+  Set <tt>asciidoc(1)</tt> attribute value (shortcut for <strong>--asciidoc-opts</strong>=<em>"-a
+  ATTRIBUTE"</em> option).
+  This option may be specified more than once.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--asciidoc-opts</strong>=<em>ASCIIDOC_OPTS</em>
+</dt>
+<dd>
+<p>
+  Additional <em><tt>asciidoc(1)</tt></em> options.
+  This option may be specified more than once.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--conf-file</strong>=<em>CONF_FILE</em>
+</dt>
+<dd>
+<p>
+  Load configuration file. See <a href="#X2">CONF FILES section</a>.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-D, --destination-dir</strong>=<em>DESTINATION_DIR</em>
+</dt>
+<dd>
+<p>
+  Output directory. Defaults to <em>SOURCE_FILE</em> directory.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-d, --doctype</strong>=<em>DOCTYPE</em>
+</dt>
+<dd>
+<p>
+  DocBook document type: <em>article</em>, <em>manpage</em> or <em>book</em>.  Default
+  document type is <em>article</em> unless the format is <em>manpage</em> (in which
+  case it defaults to <em>manpage</em>).
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-f, --format</strong>=<em>FORMAT</em>
+</dt>
+<dd>
+<p>
+  Output formats: <em>chunked</em>, <em>docbook</em>, <em>dvi</em>, <em>epub</em>, <em>htmlhelp</em>,
+  <em>manpage</em>, <em>pdf</em> (default), <em>ps</em>, <em>tex</em>, <em>text</em>, <em>xhtml</em>.
+  The AsciiDoc <em>a2x-format</em> attribute value is set to <em>FORMAT</em>.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-h, --help</strong>
+</dt>
+<dd>
+<p>
+  Print command-line syntax and program options to stdout.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--icons</strong>
+</dt>
+<dd>
+<p>
+  Use admonition or navigation icon images in output documents. The
+  default behavior is to use text in place of icons.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--icons-dir</strong>=<em>PATH</em>
+</dt>
+<dd>
+<p>
+  A path (relative to output files) containing admonition
+  and navigation icons. Defaults to <tt>images/icons</tt>.
+  The <em>--icons</em> option is implicit if this option is used.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-k, --keep-artifacts</strong>
+</dt>
+<dd>
+<p>
+  Do not delete temporary build files.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--lynx</strong>
+</dt>
+<dd>
+<p>
+  Use <em>lynx(1)</em> to generate text formatted output. The default
+  behavior is to use <em>w3m(1)</em>.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-L, --no-xmllint</strong>
+</dt>
+<dd>
+<p>
+  Do not check asciidoc output with <em>xmllint(1)</em>.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>---epubcheck</strong>
+</dt>
+<dd>
+<p>
+  Check EPUB output with <em>epubcheck(1)</em>.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-n, --dry-run</strong>
+</dt>
+<dd>
+<p>
+  Do not do anything just print what would have been done.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-r, --resource</strong>=<em>RESOURCE_SPEC</em>
+</dt>
+<dd>
+<p>
+  Specify a resource.  This option may be specified more than once.
+  See the <a href="#X3"><strong>RESOURCES</strong></a> section for more details.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-m, --resource-manifest</strong>=<em>FILE</em>
+</dt>
+<dd>
+<p>
+  <em>FILE</em> contains a list resources (one per line). Manifest <em>FILE</em>
+  entries are formatted just like <strong>--resource</strong> option arguments.
+  Environment variables and tilde home directories are allowed.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--stylesheet</strong>=<em>STYLESHEET</em>
+</dt>
+<dd>
+<p>
+  A space delimited list of one or more CSS stylesheet file names that
+  are used to style HTML output generated by DocBook XSL Stylesheets.
+  Defaults to <em>docbook-xsl.css</em>.  The stylesheets are processed in
+  list order. The stylesheets must reside in a valid <a href="#X3">resource   file</a> location.  Applies to HTML formats: <em>xhtml</em>, <em>epub</em>,
+  <em>chunked</em>, <em>htmlhelp</em> formats.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>-v, --verbose</strong>
+</dt>
+<dd>
+<p>
+  Print operational details to stderr.
+  A second <strong>-v</strong> option applies the verbose option to toolchain commands.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--version</strong>
+</dt>
+<dd>
+<p>
+  Print program version to stdout.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--xsltproc-opts</strong>=<em>XSLTPROC_OPTS</em>
+</dt>
+<dd>
+<p>
+  Additional <em>xsltproc(1)</em> options.
+  This option may be specified more than once.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--xsl-file</strong>=<em>XSL_FILE</em>
+</dt>
+<dd>
+<p>
+  Override the built-in XSL stylesheet with the custom XSL stylesheet
+  <em>XSL_FILE</em>.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--fop</strong>
+</dt>
+<dd>
+<p>
+  Use FOP to generate PDFs. The default behavior is to use
+  <em>dblatex(1)</em>.  The <em>--fop</em> option is implicit if this option is
+  used.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--fop-opts</strong>=<em>FOP_OPTS</em>
+</dt>
+<dd>
+<p>
+  Additional <em>fop(1)</em> options. If this option is specified FOP is used
+  to generate PDFs.
+  This option may be specified more than once.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--dblatex-opts</strong>=<em>DBLATEX_OPTS</em>
+</dt>
+<dd>
+<p>
+  Additional <em>dblatex(1)</em> options.
+  This option may be specified more than once.
+</p>
+</dd>
+</dl></div>
+<div class="paragraph"><p>Options can also be set in the AsciiDoc source file. If <em>SOURCE_FILE</em>
+contains a comment line beginning with <strong>// a2x:</strong> then the remainder of
+the line will be treated as <em>a2x</em> command-line options. For example:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>// a2x default options.
+//    a2x: -dbook --epubcheck
+// Suppress revision history in dblatex outputs.
+//    a2x: --dblatex-opts "-P latex.output.revhistory=0"</tt></pre>
+</div></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Options spanning multiple such comment lines will be concatenated.
+</p>
+</li>
+<li>
+<p>
+Zero or more white space characters can appear between the leading
+  <strong>//</strong> and <strong>a2x:</strong>.
+</p>
+</li>
+<li>
+<p>
+Command-line options take precedence over options set in the source
+  file.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="X4">OUTPUT FILES</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Output files are written to the directory specified by the
+<strong>--destination-dir</strong> option. If no <strong>--destination-dir</strong> option is set
+output files are written to the <em>SOURCE_FILE</em> directory.</p></div>
+<div class="paragraph"><p>Output files have the same name as the <em>SOURCE_FILE</em> but with an
+appropriate file name extension: <tt>.html</tt> for <em>xhtml</em>; <tt>.epub</tt> for
+<em>epub</em>; <tt>.hhp</tt> for <em>htmlhelp</em>; <tt>.pdf</tt> for <em>pdf</em>; <tt>.text</tt> for <em>text</em>,
+<tt>.xml</tt> for <em>docbook</em>. By convention manpages have no <tt>.man</tt> extension
+(man page section number only).  Chunked HTML directory names have a
+<tt>.chunked</tt> extension; chunked HTML Help directory names have a
+<tt>.htmlhelp</tt> extension.</p></div>
+<div class="paragraph"><p>Same named existing files are overwritten.</p></div>
+<div class="paragraph"><p>In addition to generating HTML files the <em>xhtml</em>, <em>epub</em>, <em>chunked</em>
+and <em>htmlhelp</em> formats ensure <a href="#X3">resource files</a> are copied to
+their correct destination directory locations.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="X3">RESOURCES</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Resources are files (typically CSS and images) that are required by
+HTML based outputs (<em>xhtml</em>, <em>epub</em>, <em>chunked</em>, <em>htmlhelp</em> formats).
+<em>a2x</em> scans the generated HTML files and builds a list of required CSS
+and image files. Additional resource files can be specified explicitly
+using the <strong>--resource</strong> option.</p></div>
+<div class="paragraph"><p><em>a2x</em> searches for resource files in the following locations in the
+following order:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+The <em>SOURCE_FILE</em> directory.
+</p>
+</li>
+<li>
+<p>
+Resource directories specified by the <strong>--resource</strong> option (searched
+  recursively).
+</p>
+</li>
+<li>
+<p>
+Resource directories specified by the <strong>--resource-manifest</strong> option
+  (searched recursively in the order they appear in the manifest
+  file).
+</p>
+</li>
+<li>
+<p>
+The stock <tt>images</tt> and <tt>stylesheets</tt> directories in the
+  <em><tt>asciidoc(1)</tt></em> configuration files directories (searched
+  recursively).
+</p>
+</li>
+<li>
+<p>
+The destination directory.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>When a resource file is found it is copied to the correct relative
+destination directory. Missing destination sub-directories are created
+automatically.</p></div>
+<div class="paragraph"><p>There are two distinct mechanisms for specifying additional resources:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+A resource directory which will be searched recursively for missing
+  resource files.
+</p>
+</li>
+<li>
+<p>
+A resource file which will be copied to the output destination
+  directory.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>Resources are specified with <strong>--resource</strong> option values which can be
+one of the following formats:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>&lt;resource_dir&gt;
+&lt;resource_file&gt;[=&lt;destination_file&gt;]
+.&lt;ext&gt;=&lt;mimetype&gt;</tt></pre>
+</div></div>
+<div class="paragraph"><p>Where:</p></div>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+<tt>&lt;resource_dir&gt;</tt>
+</dt>
+<dd>
+<p>
+  Specifies a directory (absolute or relative to the <em>SOURCE_FILE</em>)
+  which is searched recursively for missing resource files.  To
+  eliminate ambiguity the <tt>&lt;resource_dir&gt;</tt> name should end with a
+  directory separator character.
+</p>
+</dd>
+<dt class="hdlist1">
+<tt>&lt;resource_file&gt;</tt>
+</dt>
+<dd>
+<p>
+  Specifies a resource file (absolute or relative to the
+  <em>SOURCE_FILE</em>) which will be copied to <tt>&lt;destination_file&gt;</tt>. If
+  <tt>&lt;destination_file&gt;</tt> is not specified then it is the same as the
+  <tt>&lt;resource_file&gt;</tt>.
+</p>
+</dd>
+<dt class="hdlist1">
+<tt>&lt;destination_file&gt;</tt>
+</dt>
+<dd>
+<p>
+  Specifies the destination of the copied source file. The
+  <tt>&lt;destination_file&gt;</tt> path is relative to the destination directory
+  (absolute paths are not allowed). The location of the destination
+  directory depends on the output <em>FORMAT</em> (see the <a href="#X4"><strong>OUTPUT   FILES</strong></a> section for details):
+</p>
+<div class="dlist"><dl>
+<dt class="hdlist1">
+chunked, htmlhelp
+</dt>
+<dd>
+<p>
+The chunked output directory.
+</p>
+</dd>
+<dt class="hdlist1">
+epub
+</dt>
+<dd>
+<p>
+The archived <tt>OEBPS</tt> directory.
+</p>
+</dd>
+<dt class="hdlist1">
+xhtml
+</dt>
+<dd>
+<p>
+The output <strong>DESTINATION_DIR</strong>.
+</p>
+</dd>
+</dl></div>
+</dd>
+<dt class="hdlist1">
+<tt>.&lt;ext&gt;=&lt;mimetype&gt;</tt>
+</dt>
+<dd>
+<p>
+  When adding resources to EPUB files the mimetype is inferred from
+  the <tt>&lt;destination file&gt;</tt> extension, if the mimetype cannot be
+  guessed an error occurs. The <tt>.&lt;ext&gt;=&lt;mimetype&gt;</tt> resource syntax can
+  be used to explicitly set mimetypes. <tt>&lt;ext&gt;</tt> is the file name
+  extension, <tt>&lt;mimetype&gt;</tt> is the corresponding MIME type.
+</p>
+</dd>
+</dl></div>
+<div class="paragraph"><p>Resource option examples:</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>--resource ../images/
+--resource doc/README.txt=README.txt
+--resource ~/images/tiger.png=images/tiger.png
+--resource .ttf=application/x-font-ttf</tt></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples">EXAMPLES</h2>
+<div class="sectionbody">
+<div class="dlist"><dl>
+<dt class="hdlist1">
+<tt>a2x -f pdf doc/source-highlight-filter.txt</tt>
+</dt>
+<dd>
+<p>
+  Generates <tt>doc/source-highlight-filter.pdf</tt> file.
+</p>
+</dd>
+<dt class="hdlist1">
+<tt>a2x -f xhtml -D ../doc --icons -r ../images/ team.txt</tt>
+</dt>
+<dd>
+<p>
+  Creates HTML file <tt>../doc/team.html</tt>, uses admonition icons and
+  recursively searches the <tt>../images/</tt> directory for any missing
+  resources.
+</p>
+</dd>
+<dt class="hdlist1">
+<tt>a2x -f manpage doc/asciidoc.1.txt</tt>
+</dt>
+<dd>
+<p>
+  Generate <tt>doc/asciidoc.1</tt> manpage.
+</p>
+</dd>
+</dl></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="X1">REQUISITES</h2>
+<div class="sectionbody">
+<div class="paragraph"><p><em>a2x</em> uses the following programs:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>Asciidoc</strong>:
+  <a href="http://www.methods.co.nz/asciidoc/">http://www.methods.co.nz/asciidoc/</a>
+</p>
+</li>
+<li>
+<p>
+<strong>xsltproc</strong>: (all formats except text):
+  <a href="http://xmlsoft.org/XSLT/">http://xmlsoft.org/XSLT/</a>
+</p>
+</li>
+<li>
+<p>
+<strong>DocBook XSL Stylesheets</strong> (all formats except text):
+  <a href="http://docbook.sourceforge.net/projects/xsl/">http://docbook.sourceforge.net/projects/xsl/</a>
+</p>
+</li>
+<li>
+<p>
+<strong>dblatex</strong> (pdf, dvi, ps, tex formats):
+  <a href="http://dblatex.sourceforge.net/">http://dblatex.sourceforge.net/</a>
+</p>
+</li>
+<li>
+<p>
+<strong>FOP</strong> (pdf format&#8201;&#8212;&#8201;alternative PDF file generator):
+  <a href="http://xmlgraphics.apache.org/fop/">http://xmlgraphics.apache.org/fop/</a>
+</p>
+</li>
+<li>
+<p>
+<strong>w3m</strong> (text format):
+  <a href="http://w3m.sourceforge.net/index.en.html">http://w3m.sourceforge.net/index.en.html</a>
+</p>
+</li>
+<li>
+<p>
+<strong>Lynx</strong> (text format&#8201;&#8212;&#8201;alternative text file generator):
+  <a href="http://lynx.isc.org/">http://lynx.isc.org/</a>
+</p>
+</li>
+<li>
+<p>
+<strong>epubcheck</strong> (epub format&#8201;&#8212;&#8201;EPUB file validator):
+  <a href="http://code.google.com/p/epubcheck/">http://code.google.com/p/epubcheck/</a>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>See also the latest README file.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="X2">CONF FILES</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>A configuration file contains executable Python code that overrides
+the global configuration parameters in <tt>a2x.py</tt>.  Optional configuration
+files are loaded in the following order:</p></div>
+<div class="olist arabic"><ol class="arabic">
+<li>
+<p>
+<tt>a2x.conf</tt> from the directory containing the <em>a2x.py</em> executable.
+</p>
+</li>
+<li>
+<p>
+<tt>a2x.conf</tt> from the AsciiDoc global configuration directory.  Skip
+  this step if we are executing a locally installed (non system wide)
+  copy.
+</p>
+</li>
+<li>
+<p>
+<tt>a2x.conf</tt> from the AsciiDoc <tt>$HOME/.asciidoc</tt> configuration
+  directory.
+</p>
+</li>
+<li>
+<p>
+The <em>CONF_FILE</em> specified in the <em>--conf-file</em> option.
+</p>
+</li>
+</ol></div>
+<div class="paragraph"><p>Here are the default configuration file option values:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><tt># Optional environment variable dictionary passed to
+# executing programs. If set to None the existing
+# environment is used.
+ENV = None
+
+# External executables.
+ASCIIDOC = 'asciidoc'
+XSLTPROC = 'xsltproc'
+DBLATEX = 'dblatex'         # pdf generation.
+FOP = 'fop'                 # pdf generation (--fop option).
+W3M = 'w3m'                 # text generation.
+LYNX = 'lynx'               # text generation (if no w3m).
+XMLLINT = 'xmllint'         # Set to '' to disable.
+EPUBCHECK = 'epubcheck'     # Set to '' to disable.
+# External executable default options.
+ASCIIDOC_OPTS = ''
+DBLATEX_OPTS = ''
+FOP_OPTS = ''
+XSLTPROC_OPTS = ''</tt></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bugs">BUGS</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>See the AsciiDoc distribution BUGS file.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_author">AUTHOR</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>a2x was originally written by Stuart Rackham. Many people have
+contributed to it.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources">RESOURCES</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>SourceForge: <a href="http://sourceforge.net/projects/asciidoc/">http://sourceforge.net/projects/asciidoc/</a></p></div>
+<div class="paragraph"><p>Main web site: <a href="http://www.methods.co.nz/asciidoc/">http://www.methods.co.nz/asciidoc/</a></p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_copying">COPYING</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Copyright (C) 2002-2011 Stuart Rackham. Free use of this software is
+granted under the terms of the MIT license.</p></div>
+</div>
+</div>
+</div>
+<div id="footnotes"><hr /></div>
+<div id="footer">
+<div id="footer-text">
+Version 8.1.0<br />
+Last updated 2012-01-06 16:35:07 GMT
+</div>
+<div id="footer-badges">
+<a href="http://validator.w3.org/check?uri=referer">
+  <img style="border:0;width:88px;height:31px"
+    src="http://www.w3.org/Icons/valid-xhtml11-blue"
+    alt="Valid XHTML 1.1" height="31" width="88" />
+</a>
+<a href="http://jigsaw.w3.org/css-validator/">
+  <img style="border:0;width:88px;height:31px"
+    src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+    alt="Valid CSS!" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

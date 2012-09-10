@@ -1,0 +1,78 @@
+:reporttype:    Research Note TSSG-2012
+:reporttitle:   Nimbutas Jenkins Build Server
+:author:        David Kirwan
+:email:         dkirwan@tssg.org
+:group:         Telecommunications Software and Systems Group (TSSG)
+:address:       Waterford Institute of Technology, West Campus, Carriganore, Waterford, Ireland
+:revdate:       May 18, 2012
+:revnumber:     https://redmine.tssg.org/issues/6335[Issue 6335]
+:docdate:       May 03, 2012
+:description:   Research note regarding the Jenkins Continuous Integration server.
+:legal:         (C) Waterford Institute of Technology
+:encoding:      iso-8859-1
+:toc:
+
+image::images/logo.png["Jenkin's Logo", scaledwidth="60%", scaledheight="60%"]
+
+_"In a nutshell Jenkins CI is the leading open-source continuous integration server. Built with Java, it provides over 400 plugins to support 
+building and testing virtually any project."_ - <<Jenkins2012>>
+
+== Introduction: ==
+The purpose of this document is to explain the basics of setting up and installing a build job on the Nimbutas Jenkins build server.
+
+image::images/01.png["Creating a Job", scaledwidth="90%", scaledheight="90%"]
+_Fig1_
+
+.Creating a job on the Jenkins server:
+To create a job, we first click on the new job button at the top left of the Jenkins GUI page as can be seen in the image _Fig1_. Next we enter a
+name for the job. 
+
+image::images/02.png["Creating a Job", scaledwidth="90%", scaledheight="90%"]
+_Fig2_
+
+Unless the project will be built using Maven, its most likely best to choose the free-style project option  as shown in _Fig2_. The Maven option
+allows support for working with a project pom.xml file, however you can choose to have Jenkins automatically checkout code from a repository prior
+to being built. If you require Ant or Ivy to build the project, you can edit the ant build options on this page also.
+
+image::images/03.png["Creating a Job", scaledwidth="90%", scaledheight="90%"]
+_Fig3_
+
+Next add the description, and choose any remaining options you may wish to include. If you wish to add custom environment variables
+it is possible to do so, they can be added in the following configuration options.
+
+image::images/06.png["Environment Variables", scaledwidth="90%", scaledheight="90%"]
+_Fig4_
+
+image::images/04.png["Creating a Job", scaledwidth="90%", scaledheight="90%"]
+_Fig5_
+
+The job should now be created and you should be looking at the job control menu as seen in _Fig5_.  If you have not set the job
+to build itself automatically, you may now click on the _"Build Now"_ option from the left menu system. This will instruct Jenkins to begin
+the build, and you will be shown a build notification in the lower left hand side of the screen. If the build passes the indicator light will turn
+blue, otherwise red for a build failure. You may click the date and time link beside the indicator to access the build information, and may look at
+the raw output by clicking on the Console Output.
+
+image::images/05.png["Creating a Job", scaledwidth="90%", scaledheight="90%"]
+_Fig6_
+
+Jenkins will keep a log of successful or failed builds as can be seen in _Fig7_. Jenkins will also display a weather graphic on the main project
+page, to indicate the health of the project overall. A sun image will appear for regular successful builds, and rainclouds for ones which have multiple
+or mostly failed builds.
+
+image::images/07.png["Build Log", scaledwidth="40%", scaledheight="40%"]
+_Fig7_
+
+image::images/08.png["Project Health", scaledwidth="90%", scaledheight="90%"]
+_Fig8_
+
+It is possible to have Jenkins build jobs on a regular basis, you can edit the following section in the configuration settings for the job to make
+this occur.
+
+image::images/09.png["Scheduled builds", scaledwidth="90%", scaledheight="90%"]
+_Fig9_
+
+<<<
+== Bibliography: ==
+
+[bibliography]
+- [[[Jenkins2012]]] 'An extendable open source continuous integration server', Jenkins. 2012. http://jenkins-ci.org

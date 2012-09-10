@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="localhost" id="0" name="SimpleTest" package="com.example.simple" tests="3" time="0.04" timestamp="2012-01-30T15:33:47">
+      <properties>
+          <property name="reports.xml.dir" value="reports/junit-xml" />
+
+          <property name="instrumented.dir" value="instrumented" />
+
+          <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+
+          <property name="cobertura.dir" value="../.." />
+
+          <property name="sun.boot.library.path" value="/usr/lib/jvm/java-6-openjdk/jre/lib/i386" />
+
+          <property name="java.vm.version" value="19.0-b09" />
+
+          <property name="ant.library.dir" value="/usr/share/ant/lib" />
+
+          <property name="ant.version" value="Apache Ant version 1.7.1 compiled on September 8 2010" />
+
+          <property name="ant.java.version" value="1.6" />
+
+          <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+
+          <property name="java.vendor.url" value="http://java.sun.com/" />
+
+          <property name="path.separator" value=":" />
+
+          <property name="java.vm.name" value="OpenJDK Server VM" />
+
+          <property name="file.encoding.pkg" value="sun.io" />
+
+          <property name="user.country" value="US" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
+
+          <property name="sun.os.patch.level" value="unknown" />
+
+          <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+
+          <property name="user.dir" value="/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/examples/basic" />
+
+          <property name="java.runtime.version" value="1.6.0_20-b20" />
+
+          <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+
+          <property name="basedir" value="/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/examples/basic" />
+
+          <property name="ant.file.cobertura.examples.basic" value="/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/examples/basic/build.xml" />
+
+          <property name="coverage.html.dir" value="reports/cobertura-html" />
+
+          <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-6-openjdk/jre/lib/endorsed" />
+
+          <property name="os.arch" value="i386" />
+
+          <property name="java.io.tmpdir" value="/tmp" />
+
+          <property name="ant.core.lib" value="/usr/share/ant/lib/ant.jar" />
+
+          <property name="line.separator" value=" " />
+
+          <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+
+          <property name="reports.html.dir" value="reports/junit-html" />
+
+          <property name="os.name" value="Linux" />
+
+          <property name="ant.home" value="/usr/share/ant" />
+
+          <property name="ant.project.name" value="cobertura.examples.basic" />
+
+          <property name="sun.jnu.encoding" value="UTF-8" />
+
+          <property name="java.library.path" value="/usr/lib/jvm/java-6-openjdk/jre/lib/i386/server:/usr/lib/jvm/java-6-openjdk/jre/lib/i386:/usr/lib/jvm/java-6-openjdk/jre/../lib/i386:/usr/java/packages/lib/i386:/usr/lib/jni:/lib:/usr/lib" />
+
+          <property name="java.class.version" value="50.0" />
+
+          <property name="java.specification.name" value="Java Platform API Specification" />
+
+          <property name="sun.management.compiler" value="HotSpot Tiered Compilers" />
+
+          <property name="coverage.xml.dir" value="reports/cobertura-xml" />
+
+          <property name="os.version" value="2.6.39.4" />
+
+          <property name="ant.file" value="/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/examples/basic/build.xml" />
+
+          <property name="coverage.summaryxml.dir" value="reports/cobertura-summary-xml" />
+
+          <property name="user.home" value="/home/dkirwan" />
+
+          <property name="user.timezone" value="" />
+
+          <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+
+          <property name="java.specification.version" value="1.6" />
+
+          <property name="file.encoding" value="UTF-8" />
+
+          <property name="user.name" value="dkirwan" />
+
+          <property name="java.class.path" value="/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/examples/basic/instrumented:/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/examples/basic/classes:/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/cobertura.jar:/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/lib/asm-3.0.jar:/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/lib/asm-tree-3.0.jar:/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/lib/jakarta-oro-2.0.8.jar:/home/dkirwan/Stuff/Eclipse_Workspace/AntTestProject/cobertura/lib/log4j-1.2.9.jar:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.7.1.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar" />
+
+          <property name="reports.dir" value="reports" />
+
+          <property name="java.vm.specification.version" value="1.0" />
+
+          <property name="sun.arch.data.model" value="32" />
+
+          <property name="java.home" value="/usr/lib/jvm/java-6-openjdk/jre" />
+
+          <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+
+          <property name="user.language" value="en" />
+
+          <property name="classes.dir" value="classes" />
+
+          <property name="java.vm.info" value="mixed mode" />
+
+          <property name="java.version" value="1.6.0_20" />
+
+          <property name="java.ext.dirs" value="/usr/lib/jvm/java-6-openjdk/jre/lib/ext:/usr/java/packages/lib/ext" />
+
+          <property name="sun.boot.class.path" value="/usr/lib/jvm/java-6-openjdk/jre/lib/resources.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/rt.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/jsse.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/jce.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/charsets.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/netx.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/plugin.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/rhino.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/modules/jdk.boot.jar:/usr/lib/jvm/java-6-openjdk/jre/classes" />
+
+          <property name="java.vendor" value="Sun Microsystems Inc." />
+
+          <property name="file.separator" value="/" />
+
+          <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+
+          <property name="src.dir" value="src" />
+
+          <property name="sun.cpu.endian" value="little" />
+
+          <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+
+          <property name="sun.desktop" value="gnome" />
+
+          <property name="sun.cpu.isalist" value="" />
+
+      </properties>
+
+      <testcase classname="com.example.simple.SimpleTest" name="testSquare" time="0.001" />
+
+      <testcase classname="com.example.simple.SimpleTest" name="testF" time="0.001" />
+
+      <testcase classname="com.example.simple.SimpleTest" name="testSum" time="0.0" />
+
+      <system-out />
+
+      <system-err />
+
+  </testsuite>
+</testsuites>

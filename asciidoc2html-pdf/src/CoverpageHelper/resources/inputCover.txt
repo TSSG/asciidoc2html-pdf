@@ -1,0 +1,13 @@
+:reporttype:    Deliverable Mobile Cloud Alliance CF 2011 1303
+:reporttitle:   D1.1 Market Awareness and Engagement Report
+:author:        Christine O’Meara, Miguel Ponce de Leon
+:email:         comeara@tssg.org, miguelpdl@tssg.org
+:group:         Telecommunications Software and Systems Group (TSSG)
+:address:       Waterford Institute of Technology, West Campus, Carriganore, Waterford, Ireland
+:revdate:       April 3, 2012
+:revnumber:     https://redmine.tssg.org/issues/4096[Issue 4096]
+:docdate:       March 31, 2012
+:description:   This interim report reviews the market landscape and competitive proposition facing the MCA team as it seeks to deliver a product that will$
+:legal:         (C) Waterford Institute of Technology
+:encoding:      iso-8859-1
+:toc:

@@ -1,0 +1,93 @@
+:reporttype:  Technical Report TSSG-2012
+:reporttitle: Asciidoc2HTML-PDF Readme
+:author:      David Kirwan
+:email:       dkirwan@tssg.org
+:group:	      Telecommunications Software and Systems Group (TSSG)
+:address:     Waterford Institute of Technology, West Campus, Carriganore, Waterford, Ireland
+:revdate:     March 03, 2012
+:revnumber:   1.0
+:docdate:     March 03, 2012
+:description: Readme documentation for the Asciidoc2HTML-PDF toolchain.
+:legal:	      (C) Waterford Institute of Technology
+:toc:
+
+Usage:
+------
+Running the script generates the following output.
+
+* To output the AsciiDoc index.txt as HTML use the following command:
+	*"./asciidoc2html-pdf.sh html /path/to/report/asciidoc.txt /path/to/output/directory"*
+
+* To output the index.txt as a PDF use the following command:
+	*"./asciidoc2html-pdf.sh pdf /path/to/report/asciidoc.txt /path/to/output/directory"*
+
+Simply tell the toolchain if you wish to generate a html or pdf report, and the path to the asciidoc
+ file of your report, along with the destination directory you wish to generate the report to.
+
+The toolchain should be robust enough to be called from any location, and is hopefully intelligent enough to work out 
+out the absolute/relative path issues.
+
+The toolchain will currently generate report output documents as the same name as your input asciidoc file eg:
+
+If you passed "index.txt" as the name of your input asciidoc document, the report will be named index.html, or index.pdf
+depending on whether you choose HTML or PDF output.
+
+<<<
+Dependencies:
+-------------
+The Asciidoc2html-pdf toolchain has the following dependencies and are required in order to run, some are included, some
+need to be installed prior to use.
+
+
+|=============================
+| *utility* | *Description*
+| asciidoc | Asciidoc documentation system 8.6.6 (Required, Local copy stored in bin/)
+| coverpagehelper.jar | (Required, Local copy in the bin/)
+| docbook-xsl | Docbook stylesheets (Required, Local copy stored in bin/)
+| fop | Apache-Fop 1.0 required (Required, Local copy stored in bin/)
+| java | Java is required by Apache-Fop, and coverpagehelper.jar
+| python | Required for the Asciidoc tool itself (Not included)
+| xsltproc | XML/XSLT processor required (Not included)
+|=============================
+
+Operating System Compatibility:
+-------------------------------
+The Asciidoc2html-pdf toolchain is known to work correctly on Linux/Unix, and Mac OS, currently this toolchain is
+not suitible for operation on Windows, or on Windows through Cygwin for instance.  Cygwin operation will most likely
+be availible at a later date.  Alternatively a web app front end will be developed which will make the toolchain accessible
+to any Operating System with a web browser.
+
+<<<
+Customisation:
+--------------
+
+.NOTE:
+The following information must be included at the top of any Asciidoc input document that you wish to use with the toolchain.
+Do not change the order in which the tags appear.  You may edit the text which appears after the :tags: but please keep the 
+data to a single line per tag (Be careful with word wrap when writing the input Asciidoc file as the toolchain may break entirely, 
+or produce unexpected results if the data after the tags heads onto a new line).
+
+------------------------------------------------------
+:reporttype:  Technical Report TSSG-2012
+:reporttitle: Asciidoc2HTML-PDF Readme
+:author:      David Kirwan
+:email:       dkirwan@tssg.org
+:group:	      Telecommunications Software and Systems Group (TSSG)
+:address:     Waterford Institute of Technology, West Campus, Carriganore, Waterford, Ireland
+:revdate:     February 22, 2012
+:revnumber:   1.0
+:docdate:     February 22, 2012
+:description: Readme documentation for the Asciidoc2HTML-PDF toolchain.
+:legal:	      (C) Waterford Institute of Technology
+:toc:
+------------------------------------------------------
+
+<<<
+.NOTE:
+Finally if you wish to edit the layout for the coverpage/header/footers see the following file:
+conf/template_stylesheet.xsl warning! not for the feint hearted! 
+
+I have not gotten around to writing a tutorial for editing this file as of yet.  In the mean time
+if you have any questions please contact me at my email address listed in the document front page.
+
+

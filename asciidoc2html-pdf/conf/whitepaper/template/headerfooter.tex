@@ -1,0 +1,30 @@
+\usepackage{fancyhdr} 
+
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{30pt}
+\setlength{\textheight}{582pt}
+\setlength{\footskip}{50pt}
+
+\pagestyle{fancy} 
+\fancyhead{} % clear all header fields
+\fancyhead[L]{\includegraphics[width=1cm]{template/tssglogo}}
+\fancyhead[C]{http://www.tssg.org}
+\fancyhead[R]{The Telecommunications \\ Software \& Systems Group}
+
+\fancyfoot{\includegraphics[width=1\textwidth]{template/tssg_bar_full}} % clear all footer fields 
+\fancyfoot[C]{blank  \\\sffamily\bfseries Page \thepage}
+
+%\renewcommand{\headrulewidth}{0.4pt} 
+%\renewcommand{\footrulewidth}{0.4pt} 
+
+% set up page style for "first page of chapter"
+\fancypagestyle{plain}{% 
+\fancyhf{} % clear all header and footer fields 
+\fancyhead[R]{\trnumber \ - \trname}
+
+\fancyfoot[L]{\sffamily\scriptsize Document Classification: } 
+\fancyfoot[R]{\sffamily\bfseries\thepage} 
+ 
+%\renewcommand{\headrulewidth}{0.4pt} 
+%\renewcommand{\footrulewidth}{0.4pt}
+}

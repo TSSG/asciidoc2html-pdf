@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="localhost" name="test.CoverpageHelperTest" tests="3" time="0.112" timestamp="2012-02-06T16:07:55">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="coverage.summaryxml.dir" value="target/reports/cobertura-summary-xml" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.management.compiler" value="HotSpot Tiered Compilers" />
+    <property name="os.name" value="Linux" />
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-6-openjdk/jre/lib/resources.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/rt.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/jsse.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/jce.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/charsets.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/netx.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/plugin.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/rhino.jar:/usr/lib/jvm/java-6-openjdk/jre/lib/modules/jdk.boot.jar:/usr/lib/jvm/java-6-openjdk/jre/classes" />
+    <property name="reports.html.dir" value="target/reports/junit-html" />
+    <property name="sun.desktop" value="gnome" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.home" value="/usr/local/Ant" />
+    <property name="java.runtime.version" value="1.6.0_20-b20" />
+    <property name="cobertura.dir" value="lib/cobertura" />
+    <property name="user.name" value="dkirwan" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-6-openjdk/jre/lib/i386" />
+    <property name="reports.dir" value="target/reports" />
+    <property name="ant.project.default-target" value="coverage" />
+    <property name="ant.project.name" value="cobertura.examples.basic" />
+    <property name="ant.file.cobertura.examples.basic" value="/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/build.xml" />
+    <property name="java.version" value="1.6.0_20" />
+    <property name="coverage.html.dir" value="target/reports/cobertura-html" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-6-openjdk/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="classes.dir" value="target/classes" />
+    <property name="java.class.version" value="50.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/usr/lib/jvm/java-6-openjdk/jre" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file.type.cobertura.examples.basic" value="file" />
+    <property name="ant.file" value="/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/build.xml" />
+    <property name="os.version" value="2.6.39.4" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="19.0-b09" />
+    <property name="ant.library.dir" value="/usr/local/Ant/lib" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="reports.xml.dir" value="target/reports/junit-xml" />
+    <property name="user.home" value="/home/dkirwan" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="coverage.xml.dir" value="target/reports/cobertura-xml" />
+    <property name="java.library.path" value="/usr/lib/jvm/java-6-openjdk/jre/lib/i386/server:/usr/lib/jvm/java-6-openjdk/jre/lib/i386:/usr/lib/jvm/java-6-openjdk/jre/../lib/i386:/usr/java/packages/lib/i386:/usr/lib/jni:/lib:/usr/lib" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+    <property name="java.class.path" value="/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/target/instrumented:/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/target/classes:/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/lib/cobertura/cobertura.jar:/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/lib/cobertura/lib/asm-3.0.jar:/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/lib/cobertura/lib/asm-tree-3.0.jar:/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/lib/cobertura/lib/jakarta-oro-2.0.8.jar:/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/lib/cobertura/lib/junit-4.10.jar:/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper/lib/cobertura/lib/log4j-1.2.9.jar:/usr/local/Ant/lib/ant-launcher.jar:/usr/local/Ant/lib/ant.jar:/usr/local/Ant/lib/ant-junit.jar:/usr/local/Ant/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.file.type" value="file" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="os.arch" value="i386" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="instrumented.dir" value="target/instrumented" />
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-6-openjdk/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="user.dir" value="/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="OpenJDK Server VM" />
+    <property name="basedir" value="/home/dkirwan/Stuff/Eclipse_Workspace/CoverpageHelper" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="ant.core.lib" value="/usr/local/Ant/lib/ant.jar" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="src.dir" value="src" />
+    <property name="ant.project.invoked-targets" value="coverage" />
+  </properties>
+  <testcase classname="test.CoverpageHelperTest" name="testSetDiskPathInput" time="0.007" />
+  <testcase classname="test.CoverpageHelperTest" name="testSetDiskPathOutput" time="0.001" />
+  <testcase classname="test.CoverpageHelperTest" name="testLoadData" time="0.042" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,37 @@
+image::tssg_logo.png["TSSG Logo", scaledwidth="15%", scaledheight="15%", align="center"]
+
+[float]
+Behavioural Driven Development Report
+-------------------------------------
+
+.Research Group:
+Telecommunications Software and Systems Group (TSSG)
+
+.Address:
+Waterford Institute of Technology, West Campus, Carriganore, Waterford, Ireland
+
+.Author(s):
+David Kirwan, Some otherguy, And Anotherguy
+
+.Email List:
+dkirwan@tssg.org, someotherguy@tssg.org, andanotherguy@tssg.org
+
+.Rev Date:
+asdf
+
+.Rev Number:
+asdf
+
+.Date:
+9th January 2012
+
+.Copyright:
+(C) Waterford Institute of Technology
+
+[float]
+Synopsis:
+^^^^^^^^^
+Writing robust software requires constant Test/Behaviour driven development. Best practices suggest writing the tests first, 
+	and then the implementation after.  This allows a software system to be continually tested, checked and verified to ensure new changes do
+	not break other elements of the system unintentionally.
+

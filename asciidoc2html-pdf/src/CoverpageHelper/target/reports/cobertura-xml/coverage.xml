@@ -1,0 +1,996 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.4728434504792332" branch-rate="0.05555555555555555" lines-covered="148" lines-valid="313" branches-covered="1" branches-valid="18" complexity="1.4918032786885247" version="1.9.4.1" timestamp="1328544476588">
+	<sources>
+		<source>src</source>
+	</sources>
+	<packages>
+		<package name="main" line-rate="0.5068493150684932" branch-rate="0.16666666666666666" complexity="1.4">
+			<classes>
+				<class name="main.Coverpage" filename="main/Coverpage.java" line-rate="0.9767441860465116" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="44" hits="2" branch="false"/>
+								<line number="45" hits="2" branch="false"/>
+								<line number="46" hits="2" branch="false"/>
+								<line number="47" hits="2" branch="false"/>
+								<line number="48" hits="2" branch="false"/>
+								<line number="49" hits="2" branch="false"/>
+								<line number="50" hits="2" branch="false"/>
+								<line number="51" hits="2" branch="false"/>
+								<line number="52" hits="2" branch="false"/>
+								<line number="53" hits="2" branch="false"/>
+								<line number="54" hits="2" branch="false"/>
+								<line number="55" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAddress" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="99" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAuthorlist" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="105" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCovertitle" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="81" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getDate" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="111" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getGroup" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="93" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getLegal" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="117" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getMininame" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="75" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getMinititle" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="69" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSubtitle" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="87" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSynopsis" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="123" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setAddress" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="96" hits="1" branch="false"/>
+								<line number="97" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setAuthorlist" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="102" hits="1" branch="false"/>
+								<line number="103" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCovertitle" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="78" hits="1" branch="false"/>
+								<line number="79" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDate" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="108" hits="1" branch="false"/>
+								<line number="109" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setGroup" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="90" hits="1" branch="false"/>
+								<line number="91" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setLegal" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="114" hits="1" branch="false"/>
+								<line number="115" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setMininame" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="72" hits="1" branch="false"/>
+								<line number="73" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setMinititle" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="66" hits="1" branch="false"/>
+								<line number="67" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setSubtitle" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="84" hits="1" branch="false"/>
+								<line number="85" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setSynopsis" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="120" hits="1" branch="false"/>
+								<line number="121" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="58" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="44" hits="2" branch="false"/>
+						<line number="45" hits="2" branch="false"/>
+						<line number="46" hits="2" branch="false"/>
+						<line number="47" hits="2" branch="false"/>
+						<line number="48" hits="2" branch="false"/>
+						<line number="49" hits="2" branch="false"/>
+						<line number="50" hits="2" branch="false"/>
+						<line number="51" hits="2" branch="false"/>
+						<line number="52" hits="2" branch="false"/>
+						<line number="53" hits="2" branch="false"/>
+						<line number="54" hits="2" branch="false"/>
+						<line number="55" hits="2" branch="false"/>
+						<line number="58" hits="0" branch="false"/>
+						<line number="66" hits="1" branch="false"/>
+						<line number="67" hits="1" branch="false"/>
+						<line number="69" hits="1" branch="false"/>
+						<line number="72" hits="1" branch="false"/>
+						<line number="73" hits="1" branch="false"/>
+						<line number="75" hits="1" branch="false"/>
+						<line number="78" hits="1" branch="false"/>
+						<line number="79" hits="1" branch="false"/>
+						<line number="81" hits="1" branch="false"/>
+						<line number="84" hits="1" branch="false"/>
+						<line number="85" hits="1" branch="false"/>
+						<line number="87" hits="1" branch="false"/>
+						<line number="90" hits="1" branch="false"/>
+						<line number="91" hits="1" branch="false"/>
+						<line number="93" hits="1" branch="false"/>
+						<line number="96" hits="1" branch="false"/>
+						<line number="97" hits="1" branch="false"/>
+						<line number="99" hits="1" branch="false"/>
+						<line number="102" hits="1" branch="false"/>
+						<line number="103" hits="1" branch="false"/>
+						<line number="105" hits="1" branch="false"/>
+						<line number="108" hits="1" branch="false"/>
+						<line number="109" hits="1" branch="false"/>
+						<line number="111" hits="1" branch="false"/>
+						<line number="114" hits="1" branch="false"/>
+						<line number="115" hits="1" branch="false"/>
+						<line number="117" hits="1" branch="false"/>
+						<line number="120" hits="1" branch="false"/>
+						<line number="121" hits="1" branch="false"/>
+						<line number="123" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="main.CoverpageHelper" filename="main/CoverpageHelper.java" line-rate="0.631578947368421" branch-rate="1.0" complexity="1.1111111111111112">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="20" hits="0" branch="false"/>
+								<line number="22" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCover" signature="()Lmain/Coverpage;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="65" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getDiskPathInput" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="49" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="getDiskPathOutput" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="57" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="loadData" signature="(Ljava/io/File;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="26" hits="1" branch="false"/>
+								<line number="27" hits="1" branch="false"/>
+								<line number="30" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="saveData" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="36" hits="0" branch="false"/>
+								<line number="38" hits="0" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCover" signature="(Lmain/Coverpage;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="61" hits="1" branch="false"/>
+								<line number="62" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDiskPathInput" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="45" hits="2" branch="false"/>
+								<line number="46" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDiskPathOutput" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="53" hits="1" branch="false"/>
+								<line number="54" hits="1" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="20" hits="0" branch="false"/>
+						<line number="22" hits="0" branch="false"/>
+						<line number="26" hits="1" branch="false"/>
+						<line number="27" hits="1" branch="false"/>
+						<line number="30" hits="1" branch="false"/>
+						<line number="36" hits="0" branch="false"/>
+						<line number="38" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
+						<line number="45" hits="2" branch="false"/>
+						<line number="46" hits="2" branch="false"/>
+						<line number="49" hits="1" branch="false"/>
+						<line number="53" hits="1" branch="false"/>
+						<line number="54" hits="1" branch="false"/>
+						<line number="57" hits="1" branch="false"/>
+						<line number="61" hits="1" branch="false"/>
+						<line number="62" hits="1" branch="false"/>
+						<line number="65" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="main.FileChecker" filename="main/FileChecker.java" line-rate="0.0" branch-rate="0.0" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="9" hits="0" branch="false"/>
+								<line number="11" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="checkFile" signature="(Ljava/lang/String;)Ljava/io/File;" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="15" hits="0" branch="false"/>
+								<line number="17" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="18" hits="0" branch="false"/>
+								<line number="19" hits="0" branch="false"/>
+								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="isExist" signature="()Z" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="33" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setExist" signature="(Z)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="29" hits="0" branch="false"/>
+								<line number="30" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="9" hits="0" branch="false"/>
+						<line number="11" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="18" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+						<line number="30" hits="0" branch="false"/>
+						<line number="33" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="main.ReadAndPrintXMLFile" filename="main/ReadAndPrintXMLFile.java" line-rate="0.752" branch-rate="0.25" complexity="2.1538461538461537">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="35" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCover" signature="()Lmain/Coverpage;" line-rate="1.0" branch-rate="1.0">
+							<lines>
+								<line number="296" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readAddress" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="180" hits="1" branch="false"/>
+								<line number="181" hits="1" branch="false"/>
+								<line number="183" hits="1" branch="false"/>
+								<line number="187" hits="1" branch="false"/>
+								<line number="188" hits="1" branch="false"/>
+								<line number="190" hits="0" branch="false"/>
+								<line number="192" hits="0" branch="false"/>
+								<line number="193" hits="1" branch="false"/>
+								<line number="194" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readAuthorList" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="161" hits="1" branch="false"/>
+								<line number="162" hits="1" branch="false"/>
+								<line number="164" hits="1" branch="false"/>
+								<line number="168" hits="1" branch="false"/>
+								<line number="169" hits="1" branch="false"/>
+								<line number="171" hits="0" branch="false"/>
+								<line number="173" hits="0" branch="false"/>
+								<line number="174" hits="1" branch="false"/>
+								<line number="175" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readCoverTitle" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="237" hits="1" branch="false"/>
+								<line number="238" hits="1" branch="false"/>
+								<line number="240" hits="1" branch="false"/>
+								<line number="244" hits="1" branch="false"/>
+								<line number="245" hits="1" branch="false"/>
+								<line number="247" hits="0" branch="false"/>
+								<line number="249" hits="0" branch="false"/>
+								<line number="250" hits="1" branch="false"/>
+								<line number="251" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readCoverpageFromFile" signature="(Ljava/io/File;)V" line-rate="0.7419354838709677" branch-rate="0.25">
+							<lines>
+								<line number="41" hits="1" branch="false"/>
+								<line number="43" hits="1" branch="false"/>
+								<line number="44" hits="1" branch="false"/>
+								<line number="45" hits="1" branch="false"/>
+								<line number="48" hits="1" branch="false"/>
+								<line number="53" hits="1" branch="false"/>
+								<line number="54" hits="1" branch="false"/>
+								<line number="57" hits="1" branch="false"/>
+								<line number="59" hits="1" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="60" hits="1" branch="false"/>
+								<line number="62" hits="1" branch="false"/>
+								<line number="64" hits="1" branch="false"/>
+								<line number="66" hits="1" branch="false"/>
+								<line number="68" hits="1" branch="false"/>
+								<line number="70" hits="1" branch="false"/>
+								<line number="72" hits="1" branch="false"/>
+								<line number="74" hits="1" branch="false"/>
+								<line number="76" hits="1" branch="false"/>
+								<line number="78" hits="1" branch="false"/>
+								<line number="80" hits="1" branch="false"/>
+								<line number="84" hits="1" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="88" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="92" hits="0" branch="false"/>
+								<line number="93" hits="0" branch="false"/>
+								<line number="94" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="96" hits="0" branch="false"/>
+								<line number="97" hits="0" branch="false"/>
+								<line number="98" hits="1" branch="false"/>
+								<line number="99" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readDate" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="142" hits="1" branch="false"/>
+								<line number="143" hits="1" branch="false"/>
+								<line number="145" hits="1" branch="false"/>
+								<line number="149" hits="1" branch="false"/>
+								<line number="150" hits="1" branch="false"/>
+								<line number="152" hits="0" branch="false"/>
+								<line number="154" hits="0" branch="false"/>
+								<line number="155" hits="1" branch="false"/>
+								<line number="156" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readGroup" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="199" hits="1" branch="false"/>
+								<line number="200" hits="1" branch="false"/>
+								<line number="202" hits="1" branch="false"/>
+								<line number="206" hits="1" branch="false"/>
+								<line number="207" hits="1" branch="false"/>
+								<line number="209" hits="0" branch="false"/>
+								<line number="211" hits="0" branch="false"/>
+								<line number="212" hits="1" branch="false"/>
+								<line number="213" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readLegal" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="123" hits="1" branch="false"/>
+								<line number="124" hits="1" branch="false"/>
+								<line number="126" hits="1" branch="false"/>
+								<line number="131" hits="1" branch="false"/>
+								<line number="132" hits="1" branch="false"/>
+								<line number="133" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="136" hits="1" branch="false"/>
+								<line number="137" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readMiniName" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="256" hits="1" branch="false"/>
+								<line number="257" hits="1" branch="false"/>
+								<line number="259" hits="1" branch="false"/>
+								<line number="263" hits="1" branch="false"/>
+								<line number="264" hits="1" branch="false"/>
+								<line number="266" hits="0" branch="false"/>
+								<line number="268" hits="0" branch="false"/>
+								<line number="269" hits="1" branch="false"/>
+								<line number="270" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readMiniTitle" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="275" hits="1" branch="false"/>
+								<line number="276" hits="1" branch="false"/>
+								<line number="278" hits="1" branch="false"/>
+								<line number="282" hits="1" branch="false"/>
+								<line number="283" hits="1" branch="false"/>
+								<line number="285" hits="0" branch="false"/>
+								<line number="287" hits="0" branch="false"/>
+								<line number="288" hits="1" branch="false"/>
+								<line number="289" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readSubTitle" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="218" hits="1" branch="false"/>
+								<line number="219" hits="1" branch="false"/>
+								<line number="221" hits="1" branch="false"/>
+								<line number="225" hits="1" branch="false"/>
+								<line number="226" hits="1" branch="false"/>
+								<line number="228" hits="0" branch="false"/>
+								<line number="230" hits="0" branch="false"/>
+								<line number="231" hits="1" branch="false"/>
+								<line number="232" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="readSynopsis" signature="(Lorg/w3c/dom/Element;)V" line-rate="0.7777777777777778" branch-rate="1.0">
+							<lines>
+								<line number="104" hits="1" branch="false"/>
+								<line number="105" hits="1" branch="false"/>
+								<line number="107" hits="1" branch="false"/>
+								<line number="112" hits="1" branch="false"/>
+								<line number="113" hits="1" branch="false"/>
+								<line number="114" hits="0" branch="false"/>
+								<line number="116" hits="0" branch="false"/>
+								<line number="117" hits="1" branch="false"/>
+								<line number="118" hits="1" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCover" signature="(Lmain/Coverpage;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="292" hits="0" branch="false"/>
+								<line number="293" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="35" hits="0" branch="false"/>
+						<line number="41" hits="1" branch="false"/>
+						<line number="43" hits="1" branch="false"/>
+						<line number="44" hits="1" branch="false"/>
+						<line number="45" hits="1" branch="false"/>
+						<line number="48" hits="1" branch="false"/>
+						<line number="53" hits="1" branch="false"/>
+						<line number="54" hits="1" branch="false"/>
+						<line number="57" hits="1" branch="false"/>
+						<line number="59" hits="1" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="60" hits="1" branch="false"/>
+						<line number="62" hits="1" branch="false"/>
+						<line number="64" hits="1" branch="false"/>
+						<line number="66" hits="1" branch="false"/>
+						<line number="68" hits="1" branch="false"/>
+						<line number="70" hits="1" branch="false"/>
+						<line number="72" hits="1" branch="false"/>
+						<line number="74" hits="1" branch="false"/>
+						<line number="76" hits="1" branch="false"/>
+						<line number="78" hits="1" branch="false"/>
+						<line number="80" hits="1" branch="false"/>
+						<line number="84" hits="1" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="92" hits="0" branch="false"/>
+						<line number="93" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="96" hits="0" branch="false"/>
+						<line number="97" hits="0" branch="false"/>
+						<line number="98" hits="1" branch="false"/>
+						<line number="99" hits="1" branch="false"/>
+						<line number="104" hits="1" branch="false"/>
+						<line number="105" hits="1" branch="false"/>
+						<line number="107" hits="1" branch="false"/>
+						<line number="112" hits="1" branch="false"/>
+						<line number="113" hits="1" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="116" hits="0" branch="false"/>
+						<line number="117" hits="1" branch="false"/>
+						<line number="118" hits="1" branch="false"/>
+						<line number="123" hits="1" branch="false"/>
+						<line number="124" hits="1" branch="false"/>
+						<line number="126" hits="1" branch="false"/>
+						<line number="131" hits="1" branch="false"/>
+						<line number="132" hits="1" branch="false"/>
+						<line number="133" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="136" hits="1" branch="false"/>
+						<line number="137" hits="1" branch="false"/>
+						<line number="142" hits="1" branch="false"/>
+						<line number="143" hits="1" branch="false"/>
+						<line number="145" hits="1" branch="false"/>
+						<line number="149" hits="1" branch="false"/>
+						<line number="150" hits="1" branch="false"/>
+						<line number="152" hits="0" branch="false"/>
+						<line number="154" hits="0" branch="false"/>
+						<line number="155" hits="1" branch="false"/>
+						<line number="156" hits="1" branch="false"/>
+						<line number="161" hits="1" branch="false"/>
+						<line number="162" hits="1" branch="false"/>
+						<line number="164" hits="1" branch="false"/>
+						<line number="168" hits="1" branch="false"/>
+						<line number="169" hits="1" branch="false"/>
+						<line number="171" hits="0" branch="false"/>
+						<line number="173" hits="0" branch="false"/>
+						<line number="174" hits="1" branch="false"/>
+						<line number="175" hits="1" branch="false"/>
+						<line number="180" hits="1" branch="false"/>
+						<line number="181" hits="1" branch="false"/>
+						<line number="183" hits="1" branch="false"/>
+						<line number="187" hits="1" branch="false"/>
+						<line number="188" hits="1" branch="false"/>
+						<line number="190" hits="0" branch="false"/>
+						<line number="192" hits="0" branch="false"/>
+						<line number="193" hits="1" branch="false"/>
+						<line number="194" hits="1" branch="false"/>
+						<line number="199" hits="1" branch="false"/>
+						<line number="200" hits="1" branch="false"/>
+						<line number="202" hits="1" branch="false"/>
+						<line number="206" hits="1" branch="false"/>
+						<line number="207" hits="1" branch="false"/>
+						<line number="209" hits="0" branch="false"/>
+						<line number="211" hits="0" branch="false"/>
+						<line number="212" hits="1" branch="false"/>
+						<line number="213" hits="1" branch="false"/>
+						<line number="218" hits="1" branch="false"/>
+						<line number="219" hits="1" branch="false"/>
+						<line number="221" hits="1" branch="false"/>
+						<line number="225" hits="1" branch="false"/>
+						<line number="226" hits="1" branch="false"/>
+						<line number="228" hits="0" branch="false"/>
+						<line number="230" hits="0" branch="false"/>
+						<line number="231" hits="1" branch="false"/>
+						<line number="232" hits="1" branch="false"/>
+						<line number="237" hits="1" branch="false"/>
+						<line number="238" hits="1" branch="false"/>
+						<line number="240" hits="1" branch="false"/>
+						<line number="244" hits="1" branch="false"/>
+						<line number="245" hits="1" branch="false"/>
+						<line number="247" hits="0" branch="false"/>
+						<line number="249" hits="0" branch="false"/>
+						<line number="250" hits="1" branch="false"/>
+						<line number="251" hits="1" branch="false"/>
+						<line number="256" hits="1" branch="false"/>
+						<line number="257" hits="1" branch="false"/>
+						<line number="259" hits="1" branch="false"/>
+						<line number="263" hits="1" branch="false"/>
+						<line number="264" hits="1" branch="false"/>
+						<line number="266" hits="0" branch="false"/>
+						<line number="268" hits="0" branch="false"/>
+						<line number="269" hits="1" branch="false"/>
+						<line number="270" hits="1" branch="false"/>
+						<line number="275" hits="1" branch="false"/>
+						<line number="276" hits="1" branch="false"/>
+						<line number="278" hits="1" branch="false"/>
+						<line number="282" hits="1" branch="false"/>
+						<line number="283" hits="1" branch="false"/>
+						<line number="285" hits="0" branch="false"/>
+						<line number="287" hits="0" branch="false"/>
+						<line number="288" hits="1" branch="false"/>
+						<line number="289" hits="1" branch="false"/>
+						<line number="292" hits="0" branch="false"/>
+						<line number="293" hits="0" branch="false"/>
+						<line number="296" hits="1" branch="false"/>
+					</lines>
+				</class>
+				<class name="main.WriteXMLFile" filename="main/WriteXMLFile.java" line-rate="0.0" branch-rate="1.0" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="40" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="appendTagsToRoot" signature="(Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;Lorg/w3c/dom/Node;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="114" hits="0" branch="false"/>
+								<line number="115" hits="0" branch="false"/>
+								<line number="116" hits="0" branch="false"/>
+								<line number="117" hits="0" branch="false"/>
+								<line number="118" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="false"/>
+								<line number="120" hits="0" branch="false"/>
+								<line number="121" hits="0" branch="false"/>
+								<line number="122" hits="0" branch="false"/>
+								<line number="123" hits="0" branch="false"/>
+								<line number="124" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeAddressTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="155" hits="0" branch="false"/>
+								<line number="156" hits="0" branch="false"/>
+								<line number="157" hits="0" branch="false"/>
+								<line number="158" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeAuthorListTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="148" hits="0" branch="false"/>
+								<line number="149" hits="0" branch="false"/>
+								<line number="150" hits="0" branch="false"/>
+								<line number="151" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeCoverTitleTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="176" hits="0" branch="false"/>
+								<line number="177" hits="0" branch="false"/>
+								<line number="178" hits="0" branch="false"/>
+								<line number="179" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeCoverpage" signature="(Ljava/lang/String;Lmain/Coverpage;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="44" hits="0" branch="false"/>
+								<line number="49" hits="0" branch="false"/>
+								<line number="50" hits="0" branch="false"/>
+								<line number="52" hits="0" branch="false"/>
+								<line number="55" hits="0" branch="false"/>
+								<line number="56" hits="0" branch="false"/>
+								<line number="58" hits="0" branch="false"/>
+								<line number="59" hits="0" branch="false"/>
+								<line number="60" hits="0" branch="false"/>
+								<line number="61" hits="0" branch="false"/>
+								<line number="62" hits="0" branch="false"/>
+								<line number="63" hits="0" branch="false"/>
+								<line number="64" hits="0" branch="false"/>
+								<line number="65" hits="0" branch="false"/>
+								<line number="66" hits="0" branch="false"/>
+								<line number="67" hits="0" branch="false"/>
+								<line number="69" hits="0" branch="false"/>
+								<line number="72" hits="0" branch="false"/>
+								<line number="73" hits="0" branch="false"/>
+								<line number="76" hits="0" branch="false"/>
+								<line number="77" hits="0" branch="false"/>
+								<line number="78" hits="0" branch="false"/>
+								<line number="80" hits="0" branch="false"/>
+								<line number="83" hits="0" branch="false"/>
+								<line number="84" hits="0" branch="false"/>
+								<line number="86" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="88" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="92" hits="0" branch="false"/>
+								<line number="93" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+								<line number="96" hits="0" branch="false"/>
+								<line number="98" hits="0" branch="false"/>
+								<line number="99" hits="0" branch="false"/>
+								<line number="101" hits="0" branch="false"/>
+								<line number="102" hits="0" branch="false"/>
+								<line number="104" hits="0" branch="false"/>
+								<line number="105" hits="0" branch="false"/>
+								<line number="107" hits="0" branch="false"/>
+								<line number="108" hits="0" branch="false"/>
+								<line number="109" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeDateTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="141" hits="0" branch="false"/>
+								<line number="142" hits="0" branch="false"/>
+								<line number="143" hits="0" branch="false"/>
+								<line number="144" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeGroupTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="162" hits="0" branch="false"/>
+								<line number="163" hits="0" branch="false"/>
+								<line number="164" hits="0" branch="false"/>
+								<line number="165" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeLegalTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="134" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="136" hits="0" branch="false"/>
+								<line number="137" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeMiniNameTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="183" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="false"/>
+								<line number="185" hits="0" branch="false"/>
+								<line number="186" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeMiniTitleTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="190" hits="0" branch="false"/>
+								<line number="191" hits="0" branch="false"/>
+								<line number="192" hits="0" branch="false"/>
+								<line number="193" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeSubTitleTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="169" hits="0" branch="false"/>
+								<line number="170" hits="0" branch="false"/>
+								<line number="171" hits="0" branch="false"/>
+								<line number="172" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="writeSynopsisTag" signature="(Lmain/Coverpage;Lorg/w3c/dom/Document;)Lorg/w3c/dom/Node;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="127" hits="0" branch="false"/>
+								<line number="128" hits="0" branch="false"/>
+								<line number="129" hits="0" branch="false"/>
+								<line number="130" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="40" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+						<line number="49" hits="0" branch="false"/>
+						<line number="50" hits="0" branch="false"/>
+						<line number="52" hits="0" branch="false"/>
+						<line number="55" hits="0" branch="false"/>
+						<line number="56" hits="0" branch="false"/>
+						<line number="58" hits="0" branch="false"/>
+						<line number="59" hits="0" branch="false"/>
+						<line number="60" hits="0" branch="false"/>
+						<line number="61" hits="0" branch="false"/>
+						<line number="62" hits="0" branch="false"/>
+						<line number="63" hits="0" branch="false"/>
+						<line number="64" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
+						<line number="66" hits="0" branch="false"/>
+						<line number="67" hits="0" branch="false"/>
+						<line number="69" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="false"/>
+						<line number="73" hits="0" branch="false"/>
+						<line number="76" hits="0" branch="false"/>
+						<line number="77" hits="0" branch="false"/>
+						<line number="78" hits="0" branch="false"/>
+						<line number="80" hits="0" branch="false"/>
+						<line number="83" hits="0" branch="false"/>
+						<line number="84" hits="0" branch="false"/>
+						<line number="86" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="92" hits="0" branch="false"/>
+						<line number="93" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
+						<line number="99" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="false"/>
+						<line number="102" hits="0" branch="false"/>
+						<line number="104" hits="0" branch="false"/>
+						<line number="105" hits="0" branch="false"/>
+						<line number="107" hits="0" branch="false"/>
+						<line number="108" hits="0" branch="false"/>
+						<line number="109" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="115" hits="0" branch="false"/>
+						<line number="116" hits="0" branch="false"/>
+						<line number="117" hits="0" branch="false"/>
+						<line number="118" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="false"/>
+						<line number="120" hits="0" branch="false"/>
+						<line number="121" hits="0" branch="false"/>
+						<line number="122" hits="0" branch="false"/>
+						<line number="123" hits="0" branch="false"/>
+						<line number="124" hits="0" branch="false"/>
+						<line number="127" hits="0" branch="false"/>
+						<line number="128" hits="0" branch="false"/>
+						<line number="129" hits="0" branch="false"/>
+						<line number="130" hits="0" branch="false"/>
+						<line number="134" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="136" hits="0" branch="false"/>
+						<line number="137" hits="0" branch="false"/>
+						<line number="141" hits="0" branch="false"/>
+						<line number="142" hits="0" branch="false"/>
+						<line number="143" hits="0" branch="false"/>
+						<line number="144" hits="0" branch="false"/>
+						<line number="148" hits="0" branch="false"/>
+						<line number="149" hits="0" branch="false"/>
+						<line number="150" hits="0" branch="false"/>
+						<line number="151" hits="0" branch="false"/>
+						<line number="155" hits="0" branch="false"/>
+						<line number="156" hits="0" branch="false"/>
+						<line number="157" hits="0" branch="false"/>
+						<line number="158" hits="0" branch="false"/>
+						<line number="162" hits="0" branch="false"/>
+						<line number="163" hits="0" branch="false"/>
+						<line number="164" hits="0" branch="false"/>
+						<line number="165" hits="0" branch="false"/>
+						<line number="169" hits="0" branch="false"/>
+						<line number="170" hits="0" branch="false"/>
+						<line number="171" hits="0" branch="false"/>
+						<line number="172" hits="0" branch="false"/>
+						<line number="176" hits="0" branch="false"/>
+						<line number="177" hits="0" branch="false"/>
+						<line number="178" hits="0" branch="false"/>
+						<line number="179" hits="0" branch="false"/>
+						<line number="183" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="false"/>
+						<line number="185" hits="0" branch="false"/>
+						<line number="186" hits="0" branch="false"/>
+						<line number="190" hits="0" branch="false"/>
+						<line number="191" hits="0" branch="false"/>
+						<line number="192" hits="0" branch="false"/>
+						<line number="193" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="runner" line-rate="0.0" branch-rate="0.0" complexity="7.0">
+			<classes>
+				<class name="runner.CoverRunner" filename="runner/CoverRunner.java" line-rate="0.0" branch-rate="0.0" complexity="7.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="9" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="13" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="14" hits="0" branch="false"/>
+								<line number="18" hits="0" branch="true" condition-coverage="0% (0/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="20" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="22" hits="0" branch="false"/>
+								<line number="25" hits="0" branch="false"/>
+								<line number="26" hits="0" branch="false"/>
+								<line number="29" hits="0" branch="false"/>
+								<line number="30" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="31" hits="0" branch="false"/>
+								<line number="34" hits="0" branch="false"/>
+								<line number="35" hits="0" branch="false"/>
+								<line number="38" hits="0" branch="false"/>
+								<line number="41" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="false"/>
+								<line number="43" hits="0" branch="false"/>
+								<line number="44" hits="0" branch="false"/>
+								<line number="47" hits="0" branch="false"/>
+								<line number="51" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="9" hits="0" branch="false"/>
+						<line number="13" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="14" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="true" condition-coverage="0% (0/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="20" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="22" hits="0" branch="false"/>
+						<line number="25" hits="0" branch="false"/>
+						<line number="26" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+						<line number="30" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="31" hits="0" branch="false"/>
+						<line number="34" hits="0" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="38" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
+						<line number="43" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+						<line number="47" hits="0" branch="false"/>
+						<line number="51" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>

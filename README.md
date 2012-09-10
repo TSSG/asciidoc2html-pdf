@@ -1,15 +1,50 @@
 # TSSG 3MT Documentation System
-This repository contains both the Asciidoc2html-pdf toolchain, and also the build wrapper system for the toolchain.
+This repository contains both the Asciidoc2html-pdf toolchain and the Apache Ant build wrapper system for the toolchain.
 
 
-## asciidoc2html-pdf 
-Contains the codebase for the asciidoc2html-pdf toolchain wrapper for the Asciidoc tool, while it is possible to run
+## asciidoc2html-pdf/
+This directory contains the codebase for the asciidoc2html-pdf toolchain wrapper for the Asciidoc tool, while it is possible to run
 the script directly, it is recommended you interact with the system through the doc-ant system instead, as it adds
 a more user friendly interface for the system.
 
 
-## doc-ant
-Contains the file structure and build system wrapper for the asciidoc2html-pdf toolchain. This system is an Ant
+### Document Template Configurations
+The following is a sample Header Template configuration for a document. This must be placed at the top of the document
+before any further Asciidoc content. It is used by both the HTML and PDF template generation java helper jar.
+This system is rather fragile at present, and will most likely break if you attempt to alter the structure or swap
+the order they appear in etc.
+
+
+    :reporttype:    HOWTO
+    :reporttitle:   Configuring a .netrc file for automatic user authentication with bitbucket.org
+    :author:        David Kirwan
+    :email:         dkirwan@tssg.org
+    :group:         Telecommunications Software and Systems Group (TSSG)
+    :address:       Waterford Institute of Technology, West Campus, Carriganore, Waterford, Ireland 
+    :revdate:       September 10, 2012
+    :revnumber:     0.1
+    :docdate:       September 10, 2012
+    :description:   HOWTO configure the .netrc file to allow automatic user credentials authentication with https://bitbucket.org
+    :legal:         (C) Waterford Institute of Technology
+    :encoding:      iso-8859-1
+    :toc:
+
+The Asciidoc2html-pdf toolchain expects images which your Asciidoc source file links to are all contained within an images/
+directory on the same directory level as the input asciidoc file ie:
+
+    .
+    |-- images
+    `-- test.asciidoc
+
+The following example should demonstrate how best to do this from within your Asciidoc source file:
+
+    image::images/test.png["Title of the image", scaledwidth="60%", scaledheight="60%"]
+
+You may need to build the pdf/html output several times while adjusting the _scaledwidth_ or _scaledheight_ values to suit
+your document, or alternatively edit the size of the input image instead.
+
+## doc-ant/
+This directory contains the file structure and build system wrapper for the asciidoc2html-pdf toolchain. This system is an Ant
 build file, and requires that Apache Ant be installed on the system PATH.
 
 This ant build system is designed to make the Asciidoc2html-pdf toolchain easier to manage, it allows an easy to use

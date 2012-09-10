@@ -9,11 +9,12 @@ a more user friendly interface for the system.
 
 
 ## doc-ant
-Contains the file structure and build system wrapper for the asciidoc2html-pdf toolchain.
+Contains the file structure and build system wrapper for the asciidoc2html-pdf toolchain. This system is an Ant
+build file, and requires that Apache Ant be installed on the system PATH.
 
-This ant build system is designed to make the Asciidoc2html-pdf toolchain easier to manage, 
-it allows an easy to use interface for building both html and pdf documents, and provides
-a relatively userfriendly structure for the documents themselves.
+This ant build system is designed to make the Asciidoc2html-pdf toolchain easier to manage, it allows an easy to use
+interface for building both html and pdf documents, and providesa relatively userfriendly structure for the documents
+themselves.
 
 ### Instructions
 First copy the sample doc-build.properties to your HOME directory, and edit the paths to the Asciidoc2html-pdf
@@ -28,18 +29,20 @@ it should look something similar to the following:
     html.builder.publish=
     perforce.workingdir=
 
-pdf.builder.output is the name of the folder created to hold to PDF output.
+_pdf.builder.output_ is the name of the folder created to hold to PDF output.
 
-html.builder.output is the name of the folder created to hold the HTML output.
+_html.builder.output_ is the name of the folder created to hold the HTML output.
 
-perforce.workingdir is the output folder in the perforce repository PDF output will be copied to, can be ignored for basic use.
+_perforce.workingdir_ is the output folder in the perforce repository PDF output will be copied to, can be ignored for basic use.
 
-html.builder.publish is the output folder such as a web-dav mounted folder which the HTML output would be copied to, can be ignored for basic use
+_html.builder.publish_ is the output folder such as a web-dav mounted folder which the HTML output would be copied to, can be ignored for basic use
 
-To setup a new document for use, currently this task needs to be carried out manually, future updates to the system will allow
+To setup a new document for use we need to carry out the following steps:
+
+This currently this task needs to be carried out manually, future updates to the system will allow
 a much more user friendly interface for the system.
 
-We need the following to create a document:
+We need to copy the following structure each time we wish to create a new document:
 
     .
     |-- build.properties
@@ -48,8 +51,16 @@ We need the following to create a document:
         |-- images
         `-- test.asciidoc
 
-The build.properties must be manually updated to match the name of the asciidoc main file in the src/ directory, and once done 
-the document can be built with the following commands:
+The build.properties must be manually updated to match the name of the asciidoc main file in the src/ directory like the following:
+
+    name.project=test
+
+This case the document we wish to build is named test.asciidoc and is stored in the .src/ directory relative to the build.xml and
+build.properties files, name this to what ever you wish, and be sure to rename the ./src/test.asciidoc to match.
+
+
+### Building the Document
+The document can be built with the following commands:
 
 - ant html
 - ant pdf

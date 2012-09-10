@@ -1,5 +1,5 @@
 # TSSG 3MT Documentation System
-This repository contains both the Asciidoc2html-pdf toolchain, and also the build wrapper system for the toolchain.
+This repository contains both the Asciidoc2html-pdf toolchain and the Apache Ant build wrapper system for the toolchain.
 
 
 ## asciidoc2html-pdf 
@@ -29,7 +29,19 @@ the order they appear in etc.
     :encoding:      iso-8859-1
     :toc:
 
+The Asciidoc2html-pdf toolchain expects images which your Asciidoc source file links to are all contained within an images/
+directory on the same directory level as the input asciidoc file ie:
 
+    .
+    |-- images
+    `-- test.asciidoc
+
+The following example should demonstrate how best to do this from within your Asciidoc source file:
+
+    image::images/test.png["Title of the image", scaledwidth="60%", scaledheight="60%"]
+
+You may need to build the pdf/html output several times while adjusting the _scaledwidth_ or _scaledheight_ values to suit
+your document, or alternatively edit the size of the input image instead.
 
 ## doc-ant
 Contains the file structure and build system wrapper for the asciidoc2html-pdf toolchain. This system is an Ant

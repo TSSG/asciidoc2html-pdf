@@ -1,5 +1,10 @@
 <project>
+    <!-- load based properties from home dir -->
+    <property file="${user.home}/doc-build.properties" /> 
+    
+    <!-- load based properties from local dir -->
     <property file="build.properties" /> 
+
     <dirname property="name.dir" file="build.xml"/>
 
     <target name="clean-all" depends="clean-html,clean-pdf" />

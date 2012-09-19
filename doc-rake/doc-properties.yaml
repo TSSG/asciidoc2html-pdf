@@ -1,0 +1,5 @@
+builder.path         : /path/to/the/toolchain/asciidoc2html-pdf.sh
+pdf.builder.output   : pdf
+html.builder.output  : html
+html.publish         : /path/to/the/doc/dav
+perforce.workingdir  : /path/to/the/perforce/working/dir

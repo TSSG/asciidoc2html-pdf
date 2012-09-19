@@ -1,0 +1,18 @@
+:reporttype:    Readme
+:reporttitle:   doc-rake documentation
+:author:        David Kirwan
+:email:         dkirwan@tssg.org
+:group:         Telecommunications Software Systems Group
+:address:       Arclabs, Carriganore, Waterford 
+:revdate:       Sept 19, 2012
+:revnumber:     0.1
+:docdate:       Sept 19, 2012
+:description:   Usage instructions for the doc-rake Asciidoc2html-pdf toolchain document builder
+:legal:         (C) Waterford Institute of Technology 
+:encoding:      iso-8859-1
+:toc:
+
+
+== Introduction ==
+This contains the basic usage instructions for the doc-rake build system for the 
+Asciidoc2html-pdf toolchain.

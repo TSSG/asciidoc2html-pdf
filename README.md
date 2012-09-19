@@ -1,5 +1,9 @@
 # TSSG 3MT Documentation System
-This repository contains both the Asciidoc2html-pdf toolchain and the Apache Ant build wrapper system for the toolchain.
+This repository contains the following major items:
+
+- Asciidoc2html-pdf toolchain 
+- Apache Ant build wrapper system for the toolchain
+- Ruby Rake build wrapper system for the toolchain
 
 
 ## asciidoc2html-pdf/
@@ -95,8 +99,14 @@ build.properties files, name this to what ever you wish, and be sure to rename t
 
 
 ### Building the Document
-The document can be built with the following commands:
+The document can be built with the following commands using the Ant buildfile system:
 
+- _ant -P_ to list all tasks
 - ant html
 - ant pdf
 
+or alternatively using the Rakefile system:
+
+- _rake_ or _rake --tasks_ or _rake -T_ to list all tasks
+- rake build:html
+- rake build:pdf

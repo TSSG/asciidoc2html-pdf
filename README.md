@@ -1,5 +1,9 @@
 # TSSG 3MT Documentation System
-This repository contains both the Asciidoc2html-pdf toolchain and the Apache Ant build wrapper system for the toolchain.
+This repository contains the following major items:
+
+- Asciidoc2html-pdf toolchain 
+- Apache Ant build wrapper system for the toolchain
+- Ruby Rake build wrapper system for the toolchain
 
 
 ## asciidoc2html-pdf/
@@ -94,9 +98,43 @@ This case the document we wish to build is named test.asciidoc and is stored in 
 build.properties files, name this to what ever you wish, and be sure to rename the ./src/test.asciidoc to match.
 
 
-### Building the Document
-The document can be built with the following commands:
+## doc-rake/
+This directory contains the file structure and build system wrapper for the asciidoc2html-pdf toolchain. This system is a Rakefile
+build system and requires the Ruby programming language to be installed, along with the Ruby Gem Rake. This most likely will come 
+with a Ruby install.
 
+Like the doc-ant, this system is designed to make the Asciidoc2html-pdf toolchain easier to work with, by adding a user friendly
+interface to access the toolchain.
+
+### Instructions
+Within the doc-rake folder there exists a doc-properties.yaml file. Simply copy this to your user's HOME directory, and edit it
+using your preferred text editor. 
+
+The structure of the file is as follows:
+
+    builder.path         : /home/david/Files/TSSG/apps/asciidoc2html-pdf/asciidoc2html-pdf/asciidoc2html-pdf.sh
+    pdf.builder.output   : pdf
+    html.builder.output  : html
+    html.publish         : /home/david/Files/Eclipse-Workspace/3MT-Document-Toolchain/doc-rake/web-publish-test-dir
+    perforce.workingdir  : /home/david/Files/Eclipse-Workspace/3MT-Document-Toolchain/doc-rake/perforce-test-dir
+
+
+_builder.path_ is the path to the asciidoc2html-pdf shell script
+_pdf.builder.path.output_ is the name of the PDF output directory
+_html.builder.output_ is the name of the HTML output directory
+_html.publish_ is the path to the desired output directory which documents will be copied when you ask the Rakefile to publish html
+_perforce.workingdir_ is the path to the working directory for your perforce repository
+
+
+## Building the Document
+The document can be built with the following commands using the Ant buildfile system:
+
+- _ant -P_ to list all tasks
 - ant html
 - ant pdf
 
+or alternatively using the Rakefile system:
+
+- _rake_ or _rake --tasks_ or _rake -T_ to list all tasks
+- rake build:html
+- rake build:pdf

@@ -1,0 +1,268 @@
+### => Import libs
+require 'rubygems'
+require 'yaml'
+require 'fileutils'
+require 'logger'
+
+### => Import custom libs
+scriptPath = File.expand_path(File.dirname(__FILE__))
+
+### => Variables
+# => Date, used in some of the directory/filename generation
+date = DateTime.now
+theDate = date.year.to_s() + "-" + "%02d" % date.month.to_s() + "-" + "%02d" % date.day.to_s()
+
+# Make the logs/ directory if it does not already exist
+unless File.directory?("#{scriptPath}/logs") then FileUtils.mkdir("#{scriptPath}/logs") end
+
+# Create the logger instance
+@log = Logger.new("#{scriptPath}/logs/#{theDate}.log")
+
+# Set the logging output level
+@log.level = Logger::DEBUG
+#@log.level = Logger::WARN
+#@log.level = Logger::INFO
+
+###
+
+## => Config Reader Class
+class ConfigReader
+  class << self
+
+    attr_accessor :data
+
+    def load(path, log)
+      if File.exists?(path)
+        @data = YAML::load( File.open( path ) )
+      else
+        log.fatal "Error #{path} file not found, build failed!"
+        exit()
+      end
+      
+      return @data
+    end
+
+  end
+end
+
+#################################################################################
+task :default => 'menu'
+
+task :menu do
+
+welcome = <<-WELCOME
+rake build:html   # Generate the HTML output for this document
+rake build:pdf    # Generate the PDF output for this document
+rake clean:all    # Cleans the HTML and PDF output directories
+rake clean:html   # Cleans the HTML output directory
+rake clean:pdf    # Cleans the PDF output directory
+rake deploy:all   # Build all options and deploy to their respective destinations
+rake deploy:html  # Build and deploy the HTML output to the web-dav mount point
+rake deploy:pdf   # Build and deploy the PDF output to Perforce
+
+
+To run using a custom properties file execute rake with params
+rake properties=path/to/properties/file.yaml <task>
+
+WELCOME
+  
+  puts welcome
+  
+end
+#################################################################################
+task :read_config do
+  @log.debug ":read_config executing"
+    
+  path = ENV["properties"] || ENV["HOME"] + "/doc-properties.yaml" 
+  ConfigReader.load(path, @log)
+  
+  @log.debug "done"
+end
+
+
+namespace :create do
+  
+  # Create the directory for the HTML output
+  task :html do
+    @log.debug ":create:html executing"
+    
+    output = scriptPath + "/" + ConfigReader.data["html.builder.output"]
+    @log.debug "Creating the folder:"
+    @log.debug output
+    
+    FileUtils.mkdir(output)
+    
+    @log.debug "done"
+  end
+  
+  # Create the directory for the PDF output
+  task :pdf do
+    @log.debug ":create:pdf executing"
+    
+    output = scriptPath + "/" + ConfigReader.data["pdf.builder.output"]
+    @log.debug "Creating the folder:"
+    @log.debug output
+    
+    FileUtils.mkdir(output)
+    
+    @log.debug "done"
+  end
+  
+end
+
+
+namespace :build do
+  
+  desc "Generate the PDF output for this document"
+  task :pdf => [:read_config, "clean:pdf", "create:pdf"] do
+    @log.debug ":build:pdf executing"
+    
+    @log.debug "Building the commandline argument..."
+    
+    builder = ConfigReader.data["builder.path"]
+    cmd = "pdf"
+    input = scriptPath + "/src/" + File.basename(scriptPath) + ".asciidoc"
+    output = scriptPath + "/" + ConfigReader.data["pdf.builder.output"]
+    
+    argline ="#{builder} #{cmd} #{input} #{output}"    
+    @log.debug "Commandline argument being executed:"
+    @log.debug argline
+  
+    argline.split(" ").each do |i|
+      puts i
+    end
+    
+    sh "#{argline}" do |ok, status|
+      ok or fail "Command failed with status (#{status.exitstatus}): []"
+    end
+    
+    @log.debug "done"
+  end
+
+
+  desc "Generate the HTML output for this document"
+  task :html => [:read_config, "clean:html", "create:html"] do
+    @log.debug ":build:html executing"
+    
+    @log.debug "Building the commandline argument..."
+    
+    builder = ConfigReader.data["builder.path"]
+    cmd = "html"
+    input = scriptPath + "/src/" + File.basename(scriptPath) + ".asciidoc"
+    output = scriptPath + "/" + ConfigReader.data["html.builder.output"]
+    
+    argline ="#{builder} #{cmd} #{input} #{output}"    
+    @log.debug "Commandline argument being executed:"
+    @log.debug argline
+  
+    argline.split(" ").each do |i|
+      puts i
+    end
+    
+    sh "#{argline}" do |ok, status|
+      ok or fail "Command failed with status (#{status.exitstatus}): []"
+    end
+    
+    @log.debug "done"
+  end
+
+end
+
+
+
+namespace :clean do
+  
+  desc "Cleans the HTML output directory"
+  task :html do
+    @log.debug ":clean:html executing"
+      if File.directory?("html")
+        FileUtils.rm_rf("html")
+      end
+    @log.debug "done"
+  end
+ 
+  desc "Cleans the PDF output directory"
+  task :pdf do
+    @log.debug ":clean:pdf executing"
+      if File.directory?("pdf")
+        FileUtils.rm_rf("pdf")
+      end
+    @log.debug "done"
+  end
+  
+  
+  desc "Cleans the HTML and PDF output directories"
+  task :all => ["clean:html", "clean:pdf"] do
+    @log.debug ":clean:all executing"
+      # placeholder
+    @log.debug "done"
+  end
+
+end
+
+
+namespace :deploy do
+  
+  desc "Build and deploy the PDF output to Perforce"
+  task :pdf => ["build:pdf"] do
+    @log.debug "deploy:pdf executing"
+    
+    output = ConfigReader.data["perforce.workingdir"]
+    @log.debug output
+    
+    input = scriptPath + "/" + ConfigReader.data["pdf.builder.output"] + "/" + File.basename(scriptPath) + ".pdf"
+    @log.debug input
+    
+    @log.debug "Copying report to the perforce working directory"
+    FileUtils.cp(input, output)
+    
+    
+    @log.debug "Adding the file to the perforce working directory"
+    argline = "p4 add #{output}/#{File.basename(scriptPath)}.pdf"
+    
+    sh "#{argline}" do |ok, status|
+      ok or fail "Command failed with status (#{status.exitstatus}): []"
+    end
+    
+    @log.debug "Submitting the file to the repository"
+    argline = "p4 submit -d added #{File.basename(scriptPath)}.pdf"
+    
+    sh "#{argline}" do |ok, status|
+      ok or fail "Command failed with status (#{status.exitstatus}): []"
+    end    
+    
+    @log.debug "done"
+  end
+  
+  desc "Build and deploy the HTML output to the web-dav mount point"
+  task :html => ["build:html"] do
+    @log.debug "deploy:html executing"
+    
+    output = ConfigReader.data["html.publish"] + "/" + File.basename(scriptPath)
+    @log.debug output
+    
+    input = scriptPath + "/" + ConfigReader.data["html.builder.output"] + "/."
+    @log.debug input
+    
+    if File.directory?(output)
+      @log.debug "Copying HTML output to the publish directory"
+      FileUtils.cp_r(input, output)
+    else
+      @log.debug "Creating the folder:"
+      @log.debug output
+      FileUtils.mkdir(output)
+      
+      @log.debug "Copying HTML output to the publish directory"
+      FileUtils.cp_r(input, output)
+    end
+    
+    @log.debug "done"
+  end
+  
+  desc "Build all options and deploy to their respective destinations"
+  task :all => ["deploy:pdf", "deploy:html"] do
+    # placeholder
+  end
+  
+end
+ 

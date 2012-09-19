@@ -16,7 +16,7 @@ echo "To output the index.txt as a PDF use the following command:"
 echo "    Useage: ./asciidoc2html-pdf.sh pdf /path/to/report/asciidoc.txt /path/to/output/folder"
 echo ""
 echo ""
-exit 1
+exit 0
 fi
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"
@@ -90,9 +90,10 @@ cp $DIR/conf/template_stylesheet.css $output/
 echo "Deleting unneeded files"
 #rm -rf $output/inputReport
 rm $output/$outputfilename.xml
+rm $output/$outputfilename.output.xml
 
 #####################################################
-exit 1
+exit 0
 fi
 
 ####################################################### PDF Generation Script ##########################################################
@@ -135,5 +136,5 @@ echo "Document successfully generated and stored as $output/inputReport/$outputf
 # Launch the index.pdf file using the xpdf tool.
 #xpdf $output/inputReport/$outputfilename.pdf &
 #####################################################
-exit 1
+exit 0
 fi

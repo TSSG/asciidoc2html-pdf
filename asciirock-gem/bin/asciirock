@@ -1,0 +1,102 @@
+################################################################
+# => Author
+# => Email
+# => Date
+# => License
+# => Version
+# => Description
+#
+#
+#
+################################################################
+
+
+# => Require Statements
+require 'rubygems'
+require 'nokogiri'
+require 'asciirock'
+require 'logger'
+require 'optparse'
+
+
+# => Create the Logger instance
+@log = Logger.new(STDOUT)
+@log.level = Logger::DEBUG
+#@log.level = Logger::INFO
+#@log.level = Logger::WARN
+
+# => Optparse instance
+options = {}
+optparse = nil
+welcome = nil
+
+# => Location of this file
+scriptPath = File.expand_path(File.dirname(__FILE__))
+
+begin
+  optparse = OptionParser.new do |opts|
+
+    opts.banner = <<-WELCOME
+Asciirock - A thingy that does stuff!
+
+   Useage:  
+
+WELCOME
+
+    opts.on('-n', '--new [PATH]', "Create a new asciirock document at [PATH] or CWD") do |arg|
+      @log.debug "new document parameter passed"
+      options[:n] = arg || "."
+    end
+    
+    opts.on('-h', '--help', "Print out this message") do |arg|
+      @log.debug "help parameter passed"
+      puts opts
+      exit
+    end
+    
+    welcome = opts
+    
+  end.parse!
+rescue OptionParser::InvalidOption => e
+  puts "[" + e.message + "] please review the following for proper useage instructions:\n\n"
+  puts welcome
+  @log.fatal e.message
+  exit()
+end
+
+
+# Checking for flag parameters
+@log.debug "Checking for parameters"
+if options.empty?
+  @log.debug "No flag parameters were passed"
+  puts welcome
+  exit()
+
+else
+  @log.debug "Some flags parameters were passed"
+  @log.debug options
+  @log.debug "Checking if ARGV is empty"
+  if ARGV.empty?
+    @log.debug "no arguments were passed"
+    
+    if options[:n]
+      if options[:n] == '.'
+        @log.debug "Executing new asciirock document generation functions at current path"
+      else
+        @log.debug "Executing new asciirock document generation functions at #{options[:n]}"
+        
+        AsciiRock::CreateDocument.structure(options[:n], @log)
+        
+      end
+    end    
+    
+  else
+    @log.debug "At least one non flag parameter was passed"
+    @log.debug ARGV
+    
+    puts welcome
+    exit()
+  end
+  
+  
+end

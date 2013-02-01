@@ -26,7 +26,10 @@ import java.io.IOException;
  * 
  * @author dkirwan
  * @email dkirwan@tssg.org
+ * Copyright 2012 Waterford Institute of Technolgy
+ * Review LICENSE.txt for License
  */
+
 public class ReadAsciidocDocinfo {
 	
 	private static Coverpage cover;

@@ -50,6 +50,9 @@ should map to template below
  * @email dkirwan@tssg.org
  * @description Writes the XML Storage class Cover contents to a child of the 
  * root tag of the file specified by parameter filePath.
+ * Copyright 2012 Waterford Institute of Technolgy
+ * Review LICENSE.txt for License
+ */
  *
  */ 
 public class WriteXMLFile 

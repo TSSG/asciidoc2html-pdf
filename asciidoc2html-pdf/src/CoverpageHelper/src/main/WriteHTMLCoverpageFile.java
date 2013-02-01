@@ -4,6 +4,14 @@ import java.io.*;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * 
+ * @author dkirwan
+ * @email dkirwan@tssg.org
+ * Copyright 2012 Waterford Institute of Technolgy
+ * Review LICENSE.txt for License
+ */
+
 public class WriteHTMLCoverpageFile {
 
 	public static void writeCoverpage(String theDiskPath, Coverpage cover) {

@@ -5,6 +5,8 @@ package main;
  * @author David Kirwan
  * @email dkirwan@tssg.org
  * @description Storage class for holding the coverpage xml contents
+ * Copyright 2012 Waterford Institute of Technolgy
+ * Review LICENSE.txt for License
  *
  */
 

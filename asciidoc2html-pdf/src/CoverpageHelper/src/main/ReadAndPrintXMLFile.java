@@ -46,7 +46,9 @@ should map to template below
  * @author David Kirwan
  * @email dkirwan@tssg.org
  * @description Reads in XML file.
- *
+ * Copyright 2012 Waterford Institute of Technolgy
+ * Review LICENSE.txt for License
+ */
  */
 public class ReadAndPrintXMLFile
 {

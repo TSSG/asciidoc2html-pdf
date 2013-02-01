@@ -7,7 +7,8 @@ import java.io.File;
  * @author David Kirwan
  * @email dkirwan@tssg.org
  * @description Main class
- * 
+ * Copyright 2012 Waterford Institute of Technolgy
+ * Review LICENSE.txt for License
  */
 public class CoverpageHelper {
 	

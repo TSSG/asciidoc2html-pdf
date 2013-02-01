@@ -138,3 +138,6 @@ or alternatively using the Rakefile system:
 - _rake_ or _rake --tasks_ or _rake -T_ to list all tasks
 - rake build:html
 - rake build:pdf
+
+# LICENSE
+The license is specified in the LICENSE.txt file within this projects folder.

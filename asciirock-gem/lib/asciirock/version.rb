@@ -1,15 +1,11 @@
 ################################################################
-# => Author
-# => Email
-# => Date
-# => License
-# => Version
+# => Author David Kirwan
+# => Email dkirwan@tssg.org
+# => Date 01/02/2013
+# => License See LICENCE.txt
+# => Version 0.0.1
 # => Description
-#
-#
-#
 ################################################################
-
 
 
 require 'rubygems'

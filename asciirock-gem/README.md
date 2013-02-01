@@ -2,9 +2,9 @@
 Asciirock is a toolchain wrapper for the Asciidoc tool. It allows custom coverpage
 templates for PDF and HTML output.
 
-# COPYING / Licence
-This software is released under the creative commons attribution-sharealike 3.0 unported (cc by-sa 3.0) licence.
-for more information see: http://creativecommons.org/licenses/by-sa/3.0/
+# COPYRIGHT
+Waterford Institue of Technology 2013, please review LICENCE.txt for licence information
+
 
 # DISCLAIMER
 All code is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; 

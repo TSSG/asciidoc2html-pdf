@@ -49,7 +49,7 @@ should map to template below
  * Copyright 2012 Waterford Institute of Technolgy
  * Review LICENSE.txt for License
  */
- */
+ 
 public class ReadAndPrintXMLFile
 {
 	private static Coverpage cover;
@@ -60,6 +60,7 @@ public class ReadAndPrintXMLFile
     		
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+            docBuilder.setEntityResolver( new BlankingResolver() );
             Document doc = docBuilder.parse (coverpageFile);
 
             // normalize text representation

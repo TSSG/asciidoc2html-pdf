@@ -53,20 +53,17 @@ should map to template below
  * Copyright 2012 Waterford Institute of Technolgy
  * Review LICENSE.txt for License
  */
- *
- */ 
 public class WriteXMLFile 
 {
 	public static void writeTemplate(String filePath, Coverpage cover)
 	{
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder docBuilder;
-		Document doc;
 		
 		try {
-			docBuilder = docFactory.newDocumentBuilder();
 			//doc = docBuilder.parse(filePath);
-			doc = docBuilder.newDocument();
+			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+			docBuilder.setEntityResolver( new BlankingResolver() );
+			Document doc = docBuilder.newDocument();
 						
 			//Creates the <coverpage> </coverpage> tag
 	        Node coverpage = doc.createElement("coverpage");
@@ -178,6 +175,7 @@ public class WriteXMLFile
 		
 		try {
 			docBuilder = docFactory.newDocumentBuilder();
+			docBuilder.setEntityResolver( new BlankingResolver() );
 			doc = docBuilder.parse(filePath);
 			
 			Node rootelment=doc.getDocumentElement();

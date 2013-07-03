@@ -140,4 +140,4 @@ or alternatively using the Rakefile system:
 - rake build:pdf
 
 # LICENSE
-The license is specified in the LICENSE.txt file within this projects folder.
+The license is specified in the [LICENSE.txt](https://github.com/TSSG/asciidoc2html-pdf/blob/dev/LICENSE.txt "LICENSE.txt") file within this projects folder.

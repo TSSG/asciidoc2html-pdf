@@ -118,6 +118,7 @@ java -jar $DIR/bin/coverpagehelper.jar -p $output/inputReport/$outputfilename.xm
 
 # Converts the XML using XSL stylesheets to a .fo file suitible for passing to tools such as Apache-FOP
 xsltproc -nonet \
+-stringparam alignment justify \
 -param header.image.filename "'$DIR/conf/whitepaper/template/tssglogo.png'" \
 -param footer.image.filename "'$DIR/conf/whitepaper/template/tssg_bar_full.png'" \
 -param cover.image.filename "'$DIR/conf/whitepaper/template/tssg_logo.png'" \
